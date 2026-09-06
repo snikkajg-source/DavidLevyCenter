@@ -306,29 +306,37 @@
       max-width: 450px;
     }
 
+    .hero-top-banner-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+      width: 100%;
+    }
     .badge-status {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
+      justify-content: center;
+      gap: 0.85rem;
       background: #FFFFFF;
       color: var(--navy);
-      border: 2px solid rgba(154, 107, 31, 0.5);
-      border-radius: 8px;
-      padding: 0.65rem 1.4rem;
-      font-size: 1.05rem;
+      border: 2px solid rgba(154, 107, 31, 0.55);
+      border-radius: 50px;
+      padding: 0.75rem 2.2rem;
+      font-size: 1.15rem;
       font-family: var(--font-body);
       font-weight: 700;
-      margin-bottom: 2rem;
-      letter-spacing: 0.01em;
-      box-shadow: 0 4px 16px rgba(154, 107, 31, 0.14);
+      letter-spacing: 0.02em;
+      box-shadow: 0 6px 24px rgba(154, 107, 31, 0.16);
+      text-align: center;
     }
     .badge-status-dot {
       display: inline-block;
-      width: 10px;
-      height: 10px;
+      width: 11px;
+      height: 11px;
       border-radius: 50%;
       background: var(--gold);
-      box-shadow: 0 0 0 4px rgba(154, 107, 31, 0.25);
+      box-shadow: 0 0 0 5px rgba(154, 107, 31, 0.25);
     }
 
     .hero-logo-wrap {
@@ -434,20 +442,19 @@
     }
 
     /* =================================================================
-       EMBEDDED QUOTE HIGHLIGHT IN POINT 6 ("לסדוק את תקרת הזכוכית")
+       INLINE QUOTE HIGHLIGHT IN POINT 6 ("לסדוק את תקרת הזכוכית")
        ================================================================= */
-    .vision-embedded-quote {
-      display: inline-block;
-      align-self: flex-start;
-      background: var(--surface-2);
-      border: 1.5px solid rgba(154, 107, 31, 0.4);
-      border-radius: 6px;
-      padding: 0.6rem 1.4rem;
+    .vision-inline-quote {
+      display: inline;
       font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-weight: 700;
+      font-size: 1.28rem;
+      font-weight: 800;
       color: var(--navy);
-      box-shadow: 0 3px 12px rgba(154, 107, 31, 0.1);
+      background: rgba(154, 107, 31, 0.12);
+      border-bottom: 2px solid var(--gold);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      white-space: nowrap;
     }
 
     /* =================================================================
@@ -671,8 +678,8 @@
         max-width: 450px;
         margin-inline: auto;
       }
-      .badge-status {
-        margin-inline: auto;
+      .hero-top-banner-wrap {
+        margin-bottom: 2rem;
       }
       .hero-logo-wrap {
         justify-content: center;
@@ -823,9 +830,16 @@
   <header class="hero" id="top">
     <div class="hero-stripe"></div>
     <div class="container">
+      <!-- FRONT AND CENTER BANNER -->
+      <div class="hero-top-banner-wrap rv">
+        <div class="badge-status">
+          <span class="badge-status-dot"></span>
+          <span>אתר זמני בהקמה</span>
+        </div>
+      </div>
+
       <div class="hero-grid">
         <div class="hero-content-side">
-          <div class="badge-status rv"><span class="badge-status-dot"></span>אתר זמני בהקמה</div>
           <h1 class="hero-logo-wrap rv rv-d1" style="font-size:0; line-height:0; margin:0 0 2rem 0;">
             <img src="david-levy-center-logo-transparent.png" class="hero-logo-img" alt="מרכז מורשת דוד לוי">
           </h1>
@@ -1092,12 +1106,9 @@
           </div>
           <div style="display: flex; align-items: flex-start;">
             <span class="num-badge">6</span>
-            <div style="display: flex; flex-direction: column; gap: 0.85rem;">
-              <span style="font-size: 1.08rem; line-height: 1.8; color: var(--navy); font-weight: 600;">מרכז מורשת דוד לוי יטפח דור חדש של מנהיגים הרואים בשירות הציבורי שליחות, ובכבוד האדם ערך עליון תוך מתן דגש על קידום צעירי הפריפריה החברתית והגיאוגרפית.</span>
-              <div class="vision-embedded-quote rv rv-d1">
-                ״לסדוק את תקרת הזכוכית״
-              </div>
-            </div>
+            <span style="font-size: 1.08rem; line-height: 1.95; color: var(--navy); font-weight: 600;">
+              מרכז מורשת דוד לוי יטפח דור חדש של מנהיגים הרואים בשירות הציבורי שליחות, ובכבוד האדם ערך עליון תוך מתן דגש על קידום צעירי הפריפריה החברתית והגיאוגרפית — <span class="vision-inline-quote">״לסדוק את תקרת הזכוכית״</span>.
+            </span>
           </div>
         </div>
       </div>
