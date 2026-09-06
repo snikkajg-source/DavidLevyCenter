@@ -158,7 +158,7 @@
 
 נא להעביר לדוד ראש:
 
-Rodavid48@gmail.com
+Rodavid48@gmail.com / dr@davidlevycenter.org.il
 
 052-8991833
 
