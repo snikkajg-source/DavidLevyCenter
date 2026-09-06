@@ -3,1106 +3,806 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>מרכז מורשת דוד לוי | המנהיגות, הצדק החברתי והמורשת</title>
-  <meta name="description" content="האתר הרשמי של מרכז מורשת דוד לוי — הנצחת פועלו, מנהיגותו, חוק המרכז, תוכניות חינוך, מידע למבקרים ופעילות קהילתית.">
+  <title>מרכז מורשת דוד לוי | מסמך יסוד רשמי</title>
+  <meta name="description" content="מסמך יסוד — מרכז מורשת דוד לוי. הנצחת פועלו, מנהיגותו, חזון המרכז, אבני היסוד והפעילות.">
   
+  <link rel="icon" type="image/png" href="david-levy-center-logo-transparent.png">
+  <link rel="apple-touch-icon" href="david-levy-center-logo-transparent.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Heebo:wght@300;400;500;600;700;800&family=Noto+Serif+Hebrew:ital,wght@0,300;0,400;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <style>
-    /* ═══════════════════════════════════════════════════════════════
-       DESIGN TOKENS — STATE BLUE & DIGNIFIED CREAM PALETTE
-       ═══════════════════════════════════════════════════════════════ */
     :root {
       --bg:           #FAF8F5;
       --surface:      #FFFFFF;
-      --surface-2:    #F1EFEA;
+      --surface-2:    #F4F1EA;
       --ink:          #0F172A;
-      --ink-70:       rgba(15, 23, 42, 0.7);
-      --muted:        #475569;
+      --muted:        #334155;
       --subtle:       #64748B;
-      
-      /* Primary Brand Color: Royal State Blue */
       --accent:       #1D4ED8;
       --accent-light: rgba(29, 78, 216, 0.08);
       --accent-hover: #1E3A8A;
-      --navy:         #0F172A;
+      --navy:         #0A192F;
       --navy-light:   #1E293B;
-      
-      /* Secondary Brand Color: Deep Olive Green */
-      --olive:        #3B5E43;
-      --olive-light:  rgba(59, 94, 67, 0.1);
-      --olive-hover:  #2D4A34;
-      
-      --rule:         rgba(15, 23, 42, 0.08);
-      --rule-strong:  rgba(15, 23, 42, 0.15);
+      --gold:         #9A6B1F;
+      --gold-light:   rgba(154, 107, 31, 0.1);
+      --rule:         rgba(15, 23, 42, 0.09);
+      --rule-strong:  rgba(15, 23, 42, 0.16);
 
-      /* Typography */
       --font-display: 'Frank Ruhl Libre', 'Noto Serif Hebrew', serif;
-      --font-body:    'Heebo', 'Segoe UI', sans-serif;
-      --font-serif:   'Noto Serif Hebrew', serif;
+      --font-body:    'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-serif:   'Noto Serif Hebrew', 'Frank Ruhl Libre', serif;
       --font-mono:    'DM Mono', monospace;
 
       --ease:         cubic-bezier(0.16, 1, 0.3, 1);
-      --max-w:        1260px;
+      --max-w:        1240px;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    
     html {
-      scroll-behavior: smooth;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--font-body);
       font-size: 16px;
-      line-height: 1.7;
-      font-weight: 400;
+      scroll-behavior: smooth;
       -webkit-font-smoothing: antialiased;
     }
-
-    /* Subtle Mosaic Pattern on Background */
-    body { 
-      overflow-x: hidden; 
+    body {
       background-color: var(--bg);
-      background-image: radial-gradient(var(--accent) 0.5px, transparent 0.5px), radial-gradient(var(--accent) 0.5px, var(--bg) 0.5px);
-      background-size: 20px 20px;
-      background-position: 0 0, 10px 10px;
-      background-blend-mode: overlay;
-      opacity: 0.99;
-    }
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: var(--bg);
-      opacity: 0.97;
-      z-index: -1;
-      pointer-events: none;
-    }
-
-    body.menu-open { overflow: hidden; }
-
-    img { display: block; max-width: 100%; height: auto; }
-    
-    ::selection { background: var(--accent-light); color: var(--accent); }
-    :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
-
-    h1, h2, h3, h4 {
-      font-family: var(--font-display);
-      font-weight: 700;
       color: var(--ink);
-      text-wrap: balance;
+      font-family: var(--font-body);
+      line-height: 1.8;
+      direction: rtl;
+      text-align: right;
+      overflow-x: hidden;
+      max-width: 100%;
     }
 
-    h1 {
-      font-size: clamp(2.6rem, 6.5vw, 5.2rem);
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      font-weight: 900;
-    }
-    h2 {
-      font-size: clamp(1.9rem, 4vw, 3.1rem);
-      line-height: 1.15;
-      letter-spacing: -0.01em;
-    }
-    h2 em {
-      color: var(--accent);
-      font-style: normal;
-      text-shadow: 0 2px 4px rgba(29, 78, 216, 0.15);
-    }
-    h3 {
-      font-size: clamp(1.2rem, 2.2vw, 1.55rem);
-      line-height: 1.3;
-    }
-
-    p { max-width: 68ch; }
-
-    .label {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-
-    /* Blockquotes */
-    blockquote {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-      color: var(--accent);
-      line-height: 1.6;
-      position: relative;
-      padding: 1rem 2.5rem;
-      border-right: 4px solid var(--gold);
-      margin: 2rem 0;
-      background: var(--accent-light);
-      border-radius: 8px 0 0 8px;
-    }
-    blockquote::before {
-      content: "❝";
-      position: absolute;
-      right: 0.5rem;
-      top: -0.5rem;
-      font-size: 3rem;
-      color: var(--gold);
-      opacity: 0.3;
-    }
+    ::selection { background: rgba(29, 78, 216, 0.18); color: var(--navy); }
 
     .container {
+      width: 100%;
       max-width: var(--max-w);
       margin-inline: auto;
-      padding-inline: clamp(1.5rem, 5vw, 3rem);
-    }
-    
-    section {
-      padding-block: clamp(4.5rem, 9vh, 7.5rem);
+      padding-inline: clamp(1.25rem, 3vw, 2.5rem);
     }
 
-    /* Section Dividers */
-    .section-divider {
-      text-align: center;
-      margin: 4rem 0;
-      position: relative;
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      color: var(--navy);
+      font-weight: 700;
+      line-height: 1.25;
     }
-    .section-divider::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--rule-strong), transparent);
-      z-index: 1;
-    }
-    .section-divider::after {
-      content: "◆";
-      position: relative;
-      z-index: 2;
-      background: var(--bg);
-      padding: 0 1rem;
-      color: var(--accent);
-      font-size: 0.8rem;
-    }
+    h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); }
+    h2 { font-size: clamp(1.6rem, 2.8vw, 2.25rem); line-height: 1.3; }
+    h3 { font-size: clamp(1.25rem, 2vw, 1.65rem); }
+    h4 { font-size: 1.15rem; }
 
-    /* Animations */
-    @keyframes fade-up {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slide-in {
-      from { opacity: 0; transform: translateX(100%); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes slide-out {
-      from { opacity: 1; transform: translateX(0); }
-      to { opacity: 0; transform: translateX(100%); }
-    }
-    @keyframes pulse {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(96, 165, 250, 0.7); }
-      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(96, 165, 250, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(96, 165, 250, 0); }
-    }
+    p { margin-bottom: 1.1rem; }
+    p:last-child { margin-bottom: 0; }
 
-    .rv {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
-    }
-    .rv.in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .rv-d1 { transition-delay: 0.1s; }
-    .rv-d2 { transition-delay: 0.2s; }
-    .rv-d3 { transition-delay: 0.3s; }
-    .rv-d4 { transition-delay: 0.4s; }
+    .org-header { text-align: center; margin-bottom: 3.5rem; }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, ::before, ::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
-      .rv { opacity: 1; transform: none; }
-    }
-
-    /* ═══════════════════════════════════════════════════════════════
-       HEADER 1: TOP QUICK ACTION BAR (שורה עליונה קבועה)
-       ═══════════════════════════════════════════════════════════════ */
-    .top-action-bar {
-      position: fixed; top: 0; inset-inline: 0; z-index: 350;
-      background: var(--navy);
-      color: #ffffff;
-      height: 42px;
-      display: flex; align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .top-action-inner {
-      width: 100%; max-width: var(--max-w); margin-inline: auto;
-      padding-inline: clamp(1.5rem, 5vw, 3rem);
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .top-action-tagline {
+    .doc-date {
       font-family: var(--font-mono);
-      font-size: 0.76rem;
-      color: rgba(255,255,255,0.8);
-      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--subtle);
+      margin-top: 0.75rem;
+      letter-spacing: 0.02em;
     }
-    
 
-    .top-ctas {
-      display: flex; gap: 0.6rem; align-items: center;
-    }
-    .top-cta-btn {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      padding: 0.28rem 0.85rem;
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 0.85rem 1.8rem;
+      font-size: 0.96rem;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
       font-family: var(--font-body);
-      font-size: 0.78rem; font-weight: 600;
-      border-radius: 4px; text-decoration: none;
-      transition: all 0.25s var(--ease);
-      line-height: 1;
+      min-height: 46px;
     }
-    .top-cta-tickets { background: transparent; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.2); }
-    .top-cta-tickets:hover { background: #1D4ED8; }
-    .top-cta-whatsapp { background: transparent; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.2); }
-    .top-cta-whatsapp:hover { background: #15803D; }
-    .top-cta-donate { background: #3B5E43; color: #ffffff; border: 1px solid #3B5E43; }
-    .top-cta-donate:hover { background: #B45309; }
-
-    @media (max-width: 768px) {
-      .top-action-tagline { display: none; }
-      .top-action-inner { justify-content: center; }
-      .top-ctas { width: 100%; justify-content: center; }
-      .top-cta-btn { padding: 0.28rem 0.5rem; font-size: 0.72rem; }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.25);
     }
 
-    /* ═══════════════════════════════════════════════════════════════
-       HEADER 2: MAIN NAVIGATION WITH DROPDOWNS (7 CATEGORIES)
-       ═══════════════════════════════════════════════════════════════ */
+    .btn-header-cta {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 0.5rem 1.15rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 5px;
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      font-family: var(--font-body);
+      white-space: nowrap;
+      min-height: 40px;
+    }
+    .btn-header-cta:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    /* =================================================================
+       CLEAN SINGLE HEADER (FITS IN ONE CLEAN LINE)
+       ================================================================= */
     .main-nav {
-      position: fixed; top: 42px; inset-inline: 0; z-index: 300;
-      background: rgba(250, 248, 245, 0.96);
-      backdrop-filter: blur(14px) saturate(1.6);
+      position: fixed;
+      top: 0;
+      inset-inline: 0;
+      z-index: 340;
+      background: rgba(250, 248, 245, 0.98);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--rule);
-      height: 72px;
-      display: flex; align-items: center;
-      transition: all 0.3s ease;
+      transition: all 0.25s ease;
+      height: 76px;
+      display: flex;
+      align-items: center;
     }
     .main-nav.scrolled {
-      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+      background: rgba(255, 255, 255, 0.99);
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+      height: 68px;
     }
     .nav-inner-container {
-      width: 100%; max-width: var(--max-w); margin-inline: auto;
-      padding-inline: clamp(1.5rem, 5vw, 3rem);
-      display: flex; justify-content: space-between; align-items: center;
+      width: 100%;
+      max-width: var(--max-w);
+      margin-inline: auto;
+      padding-inline: clamp(1.25rem, 3vw, 2.5rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: clamp(0.75rem, 2vw, 2rem);
     }
-
-    /* Logo */
     .nav-logo {
-      display: flex; align-items: center; gap: 0.75rem;
-      text-decoration: none; color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: var(--navy);
+      flex-shrink: 0;
     }
-    .logo-mark { flex-shrink: 0; transition: transform 0.3s var(--ease); }
-    .nav-logo:hover .logo-mark { transform: scale(1.06) rotate(3deg); }
-    .logo-text-wrap { display: flex; flex-direction: column; line-height: 1.15; }
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      max-width: 135px;
+      object-fit: contain;
+      display: block;
+    }
+    .logo-text-wrap {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
     .logo-title-text {
-      font-family: var(--font-display); font-weight: 800;
-      font-size: 1.22rem; color: var(--ink); letter-spacing: -0.01em;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
     }
-    .logo-title-text span { color: var(--accent); font-weight: 900; }
-    .logo-subtitle-text {
-      font-family: var(--font-mono); font-size: 0.65rem;
-      color: var(--muted); letter-spacing: 0.05em; font-weight: 500;
-      margin-top: 2px;
-    }
-
-    /* 7 Categories Nav Links */
     .nav-categories {
-      display: flex; gap: 1.4rem; list-style: none; align-items: center;
-    }
-    .nav-item {
-      position: relative;
-    }
-    .nav-item > a {
-      font-size: 0.9rem; font-weight: 600; color: var(--ink);
-      text-decoration: none; padding: 1.2rem 0.3rem;
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      transition: color 0.25s ease;
-    }
-    .nav-item > a::after {
-      content: '▾'; font-size: 0.7rem; color: var(--subtle); transition: transform 0.25s;
-    }
-    .nav-item.no-drop > a::after { content: none; }
-    .nav-item:hover > a { color: var(--accent); }
-    .nav-item:hover > a::after { transform: rotate(180deg); color: var(--accent); }
-
-    /* Dropdown Menus */
-    .dropdown {
-      position: absolute; top: 100%; inset-inline-start: 0;
-      background: var(--surface);
-      border: 1px solid var(--rule-strong);
-      border-radius: 8px;
-      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
-      min-width: 240px;
-      padding: 0.6rem 0;
-      opacity: 0; visibility: hidden; transform: translateY(10px);
-      transition: all 0.25s var(--ease);
-      z-index: 400;
+      display: flex;
       list-style: none;
+      gap: clamp(0.6rem, 1.3vw, 1.35rem);
+      align-items: center;
+      white-space: nowrap;
     }
-    .nav-item:hover .dropdown {
-      opacity: 1; visibility: visible; transform: translateY(0);
+    .nav-item a {
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 0.35rem 0.15rem;
+      transition: color 0.2s;
+      white-space: nowrap;
     }
-    .dropdown li a {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 0.65rem 1.2rem;
-      font-size: 0.88rem; font-weight: 500; color: var(--muted);
-      text-decoration: none; transition: all 0.2s ease;
-    }
-    .dropdown li a:hover {
-      background: var(--accent-light); color: var(--accent); padding-inline-start: 1.5rem;
-    }
-    .dropdown li a .badge-sm {
-      font-family: var(--font-mono); font-size: 0.68rem;
-      background: rgba(15,23,42,0.06); padding: 0.1rem 0.4rem; border-radius: 3px;
-    }
+    .nav-item a:hover { color: var(--accent); }
 
-    /* Mobile Hamburger */
+    .nav-end-actions {
+      display: flex;
+      align-items: center;
+      gap: clamp(0.6rem, 1.2vw, 1.1rem);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .nav-contact-link {
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-contact-link:hover { color: var(--accent); }
+
     .mobile-menu-btn {
-      display: none; background: none; border: none; font-size: 1.8rem; cursor: pointer; color: var(--ink);
-      transition: transform 0.3s var(--ease); padding: 0.5rem;
-    }
-    .mobile-menu-btn:hover { color: var(--accent); }
-    @media (max-width: 1080px) {
-      .nav-categories { display: none; }
-      .mobile-menu-btn { display: block; }
+      display: none;
+      background: transparent;
+      border: 1px solid var(--rule-strong);
+      border-radius: 6px;
+      padding: 0.45rem 0.85rem;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+      min-height: 42px;
+      min-width: 44px;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* Mobile Nav Panel */
-    .mobile-nav-panel {
-      position: fixed;
-      top: 0; right: 0; bottom: 0;
-      width: 85vw; max-width: 400px;
-      background: var(--surface);
-      z-index: 1000;
-      box-shadow: -10px 0 50px rgba(0,0,0,0.2);
-      display: flex; flex-direction: column;
-      transform: translateX(100%);
-      transition: transform 0.4s var(--ease);
-      overflow-y: auto;
-    }
-    .mobile-nav-panel.open {
-      transform: translateX(0);
-    }
+    /* MOBILE NAV DRAWER */
     .mobile-nav-backdrop {
-      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(15, 23, 42, 0.4);
-      backdrop-filter: blur(4px);
-      z-index: 999;
-      opacity: 0; pointer-events: none;
-      transition: opacity 0.4s var(--ease);
+      position: fixed; inset: 0; background: rgba(15, 23, 42, 0.5);
+      z-index: 400; opacity: 0; pointer-events: none; transition: opacity 0.3s;
     }
-    .mobile-nav-backdrop.open {
-      opacity: 1; pointer-events: auto;
+    .mobile-nav-backdrop.open { opacity: 1; pointer-events: auto; }
+    .mobile-nav-panel {
+      position: fixed; top: 0; bottom: 0; right: 0; width: 320px; max-width: 85vw;
+      background: #ffffff; z-index: 410; transform: translateX(100%);
+      transition: transform 0.35s var(--ease); box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+      display: flex; flex-direction: column; overflow-y: auto;
     }
+    .mobile-nav-panel.open { transform: translateX(0); }
     .mobile-nav-header {
+      padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule);
       display: flex; justify-content: space-between; align-items: center;
-      padding: 1.5rem; border-bottom: 1px solid var(--rule);
     }
     .mobile-nav-close {
-      background: none; border: none; font-size: 2rem; cursor: pointer; color: var(--ink);
-      line-height: 1; transition: transform 0.3s;
+      background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--muted);
+      padding: 0.25rem; line-height: 1; min-width: 40px; min-height: 40px;
+      display: flex; align-items: center; justify-content: center;
     }
-    .mobile-nav-close:hover { transform: rotate(90deg); color: var(--accent); }
-    .mobile-menu-list {
-      list-style: none; padding: 0; margin: 0; flex-grow: 1;
+    .mobile-menu-list { list-style: none; padding: 1rem 0; flex-grow: 1; }
+    .mobile-menu-item a {
+      display: block; padding: 0.85rem 1.5rem; font-size: 1rem; font-weight: 500;
+      color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--rule);
     }
-    .mobile-menu-item {
-      border-bottom: 1px solid var(--rule);
-    }
-    .mobile-menu-link {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1.2rem 1.5rem; font-size: 1.1rem; font-weight: 600; color: var(--ink); text-decoration: none;
-    }
-    .mobile-menu-link[data-toggle]::after {
-      content: '▾'; font-size: 0.9rem; transition: transform 0.3s;
-    }
-    .mobile-menu-item.active .mobile-menu-link[data-toggle]::after {
-      transform: rotate(180deg);
-    }
-    .mobile-sub-menu {
-      list-style: none; background: var(--surface-2); display: none;
-    }
-    .mobile-menu-item.active .mobile-sub-menu {
-      display: block; animation: fade-up 0.3s var(--ease);
-    }
-    .mobile-sub-menu li a {
-      display: block; padding: 1rem 2rem; font-size: 0.95rem; color: var(--muted); text-decoration: none;
-      border-bottom: 1px solid var(--rule);
-    }
-    .mobile-nav-footer {
-      padding: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem;
-    }
-    .mobile-nav-footer .top-cta-btn {
-      justify-content: center; padding: 0.8rem; font-size: 0.95rem;
-    }
+    .mobile-menu-item a:hover { background: var(--surface-2); color: var(--accent); }
+    .mobile-nav-footer { padding: 1.5rem; border-top: 1px solid var(--rule); display: flex; flex-direction: column; gap: 0.75rem; }
+    .mobile-nav-footer .btn-header-cta { text-align: center; }
 
-    /* ═══════════════════════════════════════════════════════════════
-       HERO SECTION
-       ═══════════════════════════════════════════════════════════════ */
-    .hero-stripe {
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 4px;
-      background: linear-gradient(to right, var(--accent), var(--gold));
-      z-index: 1;
-    }
+    /* =================================================================
+       HERO SECTION (CO-EQUAL HEROES: 450PX LOGO ALONGSIDE 450PX PICTURE)
+       ================================================================= */
     .hero {
+      padding-top: 7.5rem;
+      padding-bottom: 4.8rem;
       background: var(--bg);
-      min-height: 88vh;
-      display: flex; align-items: center;
-      padding-top: 10.5rem; padding-bottom: 4rem;
+      border-bottom: 1px solid var(--rule);
       position: relative;
+    }
+    .hero-stripe {
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(to right, var(--navy), var(--accent), var(--gold));
     }
     .hero-grid {
-      display: grid; grid-template-columns: 1.25fr 1fr;
-      gap: 3.5rem; align-items: center; width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: center;
+      justify-items: center;
     }
-    @media (max-width: 960px) {
-      .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
-      .hero-actions { justify-content: center; }
-      .hero-img-container { display: flex; justify-content: center; }
-      .label { justify-content: center; }
+    .hero-content-side {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 450px;
     }
-    .hero-text { display: flex; flex-direction: column; gap: 1.5rem; }
-    .hero h1 em { font-style: normal; color: var(--accent); }
-    .hero-sub {
-      font-family: var(--font-serif);
-      font-size: clamp(1.1rem, 1.8vw, 1.3rem);
-      line-height: 1.75; color: var(--muted);
-      max-width: 52ch; font-weight: 300;
-    }
-    @media (max-width: 960px) {
-      .hero-sub { margin-inline: auto; }
-    }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
-    
-    .btn-primary {
-      background: linear-gradient(135deg, #2563EB, var(--accent)); color: #ffffff;
-      padding: 0.85em 2em; font-weight: 600; border-radius: 6px; text-decoration: none; border: none;
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s;
-      cursor: pointer;
-    }
-    .btn-primary:hover { background: linear-gradient(135deg, var(--accent), #1E3A8A); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(29, 78, 216, 0.22); }
-    .btn-primary:active { transform: scale(0.98); }
-    
-    .btn-outline {
-      background: transparent; border: 1.5px solid var(--accent); color: var(--accent);
-      padding: 0.85em 2em; font-weight: 600; border-radius: 6px; text-decoration: none;
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; transition: all 0.3s;
-      cursor: pointer;
-    }
-    .btn-outline:hover { 
-      background: var(--accent-light); transform: translateY(-2px); 
-      border-style: dotted; 
-    }
-    .btn-outline:active { transform: scale(0.98); }
 
-    .hero-img-container {
-      position: relative;
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: rgba(154, 107, 31, 0.12);
+      color: var(--gold);
+      border: 1px solid rgba(154, 107, 31, 0.25);
+      border-radius: 4px;
+      padding: 0.35rem 0.8rem;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      margin-bottom: 1.75rem;
+      letter-spacing: 0.02em;
+    }
+    .badge-status::before {
+      content: '';
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .hero-logo-wrap {
+      margin-bottom: 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .hero-logo-img {
+      width: 450px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .hero-cta-wrap {
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+
+    .hero-portrait-side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
     }
     .hero-frame {
-      background: var(--surface); padding: 1.8rem;
-      border: 1px solid var(--rule-strong); border-radius: 8px;
-      box-shadow: inset 0 0 20px rgba(0,0,0,0.03), 0 20px 50px rgba(15, 23, 42, 0.08); 
-      max-width: 440px; width: 100%;
+      max-width: 450px;
+      width: 100%;
       position: relative;
-      z-index: 2;
     }
-    .hero-frame img { width: 100%; height: auto; display: block; border-radius: 4px; }
-    .hero-frame-caption {
-      font-family: var(--font-serif); font-size: 0.9rem; font-style: italic;
-      color: var(--muted); margin-top: 1.2rem; text-align: center; line-height: 1.5;
+    .hero-frame img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      border-radius: 8px;
+      border: 1px solid var(--rule-strong);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
     }
-    .hero-badge {
-      position: absolute;
-      bottom: -15px; left: -20px;
-      background: linear-gradient(135deg, var(--gold), #B45309);
-      color: #fff;
-      padding: 0.6rem 1.2rem;
-      border-radius: 30px;
+
+    /* =================================================================
+       DOCUMENT CONTENT SECTIONS
+       ================================================================= */
+    section {
+      padding: 5.2rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .section-bg-alt { background: var(--surface-2); }
+    .section-bg-white { background: var(--surface); }
+
+    .doc-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: clamp(1.75rem, 4vw, 3rem);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    }
+    .doc-card-accent {
+      border: 1px solid rgba(29, 78, 216, 0.25);
+      background: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(29, 78, 216, 0.04);
+    }
+    .doc-card-gold {
+      border: 1px solid rgba(154, 107, 31, 0.28);
+      background: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(154, 107, 31, 0.04);
+    }
+    .doc-card-navy {
+      border: 1px solid rgba(10, 25, 47, 0.22);
+      background: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(10, 25, 47, 0.04);
+    }
+
+    .institutional-quote {
+      border: 1px solid var(--rule-strong);
+      background: var(--surface-2);
+      padding: 1.8rem 2.2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .institutional-quote p {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      line-height: 1.85;
+      color: var(--navy);
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+
+    .num-badge {
+      display: inline-block;
+      min-width: 1.5rem;
+      color: var(--gold);
+      font-family: var(--font-display);
+      font-size: 1.2rem;
       font-weight: 700;
-      font-size: 0.9rem;
-      box-shadow: 0 10px 20px rgba(217, 119, 6, 0.3);
-      z-index: 3;
-      animation: fade-up 1s ease 0.5s both;
+      line-height: 1.4;
+      margin-inline-end: 0.5rem;
+      flex-shrink: 0;
     }
 
-    /* ═══════════════════════════════════════════════════════════════
-       STATS RIBBON
-       ═══════════════════════════════════════════════════════════════ */
-    .stats {
-      background: linear-gradient(135deg, #ffffff, #F0F4FF);
-      border-block: 1px solid var(--rule);
-      padding-block: clamp(2.5rem, 5vw, 4rem);
-    }
-    .stats-row {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
-    }
-    @media (max-width: 768px) { 
-      .stats-row { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; } 
-      .stat:nth-child(odd) { border-left: 1px solid var(--rule-strong); }
-      .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--rule-strong); padding-bottom: 1.5rem; }
-    }
-    .stat { text-align: center; }
-    .stat-num-wrapper {
-      display: inline-flex; align-items: baseline;
-    }
-    .stat-num {
-      font-family: var(--font-display); font-size: clamp(2.8rem, 6vw, 4.5rem);
-      font-weight: 900; line-height: 1; color: var(--accent);
-    }
-    .stat-plus {
-      font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--gold); margin-right: 0.2rem;
-    }
-    .stat-txt { font-size: 0.9rem; color: var(--muted); margin-top: 0.5rem; font-weight: 600; }
-    @media (min-width: 769px) { .stat + .stat { border-inline-start: 1px solid var(--rule-strong); } }
-
-    /* ═══════════════════════════════════════════════════════════════
-       SECTION 1: דוד לוי (האיש והמורשת)
-       ═══════════════════════════════════════════════════════════════ */
-    .bio-grid {
-      display: grid; grid-template-columns: 1fr; gap: clamp(2.5rem, 5vw, 5rem); align-items: center;
-    }
-    @media (min-width: 900px) { .bio-grid { grid-template-columns: 5fr 6fr; } }
-    .bio-img {
-      border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3;
-      box-shadow: 0 16px 48px rgba(15, 23, 42, 0.08); border: 1px solid var(--rule-strong);
-    }
-    .bio-img img { width: 100%; height: 100%; object-fit: cover; }
-    .bio-text { display: flex; flex-direction: column; gap: 1.3rem; }
-    .bio-text p { color: var(--muted); font-size: 1.05rem; line-height: 1.8; font-weight: 400; }
-
-    /* Archive & Media tabs inside Section 1 */
-    .media-box {
-      background: var(--surface); border: 1px solid var(--rule);
-      border-radius: 10px; padding: 2.5rem; margin-top: 3rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    }
-    .media-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;
-    }
-    .media-card {
-      background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 1.5rem;
-      display: flex; flex-direction: column; gap: 0.8rem; text-decoration: none; color: var(--ink);
-      transition: all 0.3s var(--ease);
-      border-right: 3px solid transparent;
+    /* =================================================================
+       QUOTE HERO ROW ("לסדוק את תקרת הזכוכית")
+       ================================================================= */
+    .quote-hero-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, #172A45 100%);
+      color: #ffffff;
+      border-radius: 8px;
+      border: 1px solid rgba(154, 107, 31, 0.35);
+      padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 3.5vw, 2.5rem);
+      margin-top: 2.5rem;
+      box-shadow: 0 10px 30px rgba(10, 25, 47, 0.18);
+      text-align: center;
       position: relative;
       overflow: hidden;
     }
-    .media-card::before {
-      content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(180deg, transparent, var(--accent-light));
-      opacity: 0; transition: opacity 0.3s;
+    .quote-hero-banner::before {
+      content: '“';
+      position: absolute;
+      top: -15px;
+      right: 25px;
+      font-family: var(--font-display);
+      font-size: 8rem;
+      color: rgba(255, 255, 255, 0.06);
+      line-height: 1;
+      pointer-events: none;
     }
-    .media-card:hover { 
-      border-color: var(--accent); transform: translateY(-4px) scale(1.02); 
-      border-right: 3px solid var(--accent);
-      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+    .quote-hero-text {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
     }
-    .media-card:hover::before { opacity: 1; }
-    .media-card-title { font-weight: 700; font-size: 1.05rem; position: relative; z-index: 1; }
-    .media-card-desc { font-size: 0.9rem; color: var(--muted); position: relative; z-index: 1; line-height: 1.5; }
 
-    /* ═══════════════════════════════════════════════════════════════
-       TIMELINE MODULE
-       ═══════════════════════════════════════════════════════════════ */
-    .timeline {
-      background: var(--surface-2);
-      padding-block: 5rem;
-    }
-    .timeline-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-    .tl {
-      position: relative;
-      max-width: 900px;
+    /* =================================================================
+       TENDERS SECTION (MINIMALIST AS SPECIFIED)
+       ================================================================= */
+    .tenders-official-card {
+      max-width: 820px;
       margin: 0 auto;
-      padding: 2rem 0;
+      background: var(--surface);
+      border: 1px solid var(--rule-strong);
+      border-radius: 8px;
+      padding: clamp(2rem, 4.5vw, 3.5rem);
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
     }
-    .tl::before {
+    .tenders-official-card::before {
       content: '';
       position: absolute;
-      top: 0; bottom: 0; left: 50%;
-      width: 2px;
+      top: 0; left: 0; right: 0;
+      height: 4px;
       background: var(--accent);
-      opacity: 0.2;
-      transform: translateX(-50%);
+      border-radius: 8px 8px 0 0;
     }
-    .tl-item {
-      position: relative;
-      margin-bottom: 3rem;
-      width: 100%;
-      display: flex;
-      justify-content: flex-end; /* RTL default to right side of center */
+    .tenders-official-card h2 {
+      margin-bottom: 1.25rem;
     }
-    .tl-item:nth-child(even) {
-      justify-content: flex-start;
-    }
-    .tl-marker {
-      position: absolute;
-      left: 50%;
-      top: 1.5rem;
-      transform: translate(-50%, -50%);
-      width: 48px;
-      height: 48px;
-      background: var(--accent);
-      border: 4px solid var(--surface-2);
-      border-radius: 50%;
-      color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-mono); font-weight: 700; font-size: 0.9rem;
-      z-index: 2;
-      box-shadow: 0 4px 10px rgba(29, 78, 216, 0.3);
-    }
-    .tl-content {
-      width: 45%;
-      background: var(--surface);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      position: relative;
-      border-right: 4px solid var(--accent);
-      transition: transform 0.3s var(--ease);
-    }
-    .tl-item:nth-child(even) .tl-content {
-      border-right: none;
-      border-left: 4px solid var(--accent);
-    }
-    .tl-content:hover {
-      transform: translateY(-5px);
-    }
-    .tl-year {
-      font-family: var(--font-mono);
-      color: var(--accent);
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      background: var(--accent-light);
-      display: inline-block;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-    }
-    .tl-title {
-      font-size: 1.3rem;
-      font-family: var(--font-display);
-      font-weight: 700;
-      margin-bottom: 0.8rem;
-      color: var(--ink);
-    }
-    .tl-desc {
+    .tenders-lead-text {
       color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+      max-width: 65ch;
+      margin-inline: auto;
+    }
+    .tender-item-highlight {
+      background: var(--surface-2);
+      border: 1.5px solid rgba(29, 78, 216, 0.3);
+      border-radius: 8px;
+      padding: 1.25rem 2.25rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      display: inline-block;
+      margin-inline: auto;
+      box-shadow: 0 4px 16px rgba(29, 78, 216, 0.06);
+    }
+
+    /* =================================================================
+       CONTACT SECTION & FORM
+       ================================================================= */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 2.2rem;
+    }
+    .contact-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .contact-item:last-child { border-bottom: none; }
+    .contact-item-title {
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      color: var(--subtle);
+      margin-bottom: 0.3rem;
+    }
+    .contact-item-val {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .contact-item-val a { color: var(--accent); text-decoration: none; }
+    .contact-item-val a:hover { text-decoration: underline; }
+
+    .form-group { margin-bottom: 1.2rem; }
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--rule-strong);
+      border-radius: 6px;
+      font-family: var(--font-body);
+      font-size: 16px !important;
+      min-height: 46px;
+      background: var(--bg);
+      color: var(--ink);
+      direction: rtl;
+    }
+    .form-control:focus { outline: none; border-color: var(--accent); background: #fff; }
+    textarea.form-control { min-height: 110px; }
+
+    .form-row-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: var(--navy);
+      color: rgba(255, 255, 255, 0.8);
+      padding: 4.5rem 0 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .footer-brand img {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+    }
+    .footer-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .footer-links-list {
+      list-style: none;
+      columns: 2;
+      column-gap: 2rem;
+    }
+    .footer-links-list li { margin-bottom: 0.75rem; }
+    .footer-links-list a {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      font-size: 0.92rem;
+      transition: color 0.2s;
+    }
+    .footer-links-list a:hover { color: #ffffff; }
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+      z-index: 300;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+    }
+    .back-to-top.visible { opacity: 1; pointer-events: auto; }
+    .back-to-top:hover { background: var(--accent); }
+
+    .rv { opacity: 0; transform: translateY(16px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease); }
+    .rv.in { opacity: 1; transform: translateY(0); }
+    .rv-d1 { transition-delay: 0.1s; }
+    .rv-d2 { transition-delay: 0.2s; }
+    .rv-d3 { transition-delay: 0.3s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rv { opacity: 1 !important; transform: none !important; transition: none !important; }
+      * { scroll-behavior: auto !important; }
+    }
+
+    /* =================================================================
+       RESPONSIVE REFINEMENTS
+       ================================================================= */
+    @media (max-width: 1120px) {
+      .nav-categories { display: none; }
+      .nav-contact-link { display: none; }
+      .mobile-menu-btn { display: inline-flex; }
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.75rem;
+        text-align: center;
+      }
+      .hero-content-side {
+        align-items: center;
+        max-width: 450px;
+        margin-inline: auto;
+      }
+      .badge-status {
+        margin-inline: auto;
+      }
+      .hero-logo-wrap {
+        justify-content: center;
+        margin-inline: auto;
+      }
+      .hero-logo-img {
+        width: min(450px, 90vw);
+      }
+      .hero-frame {
+        max-width: min(450px, 90vw);
+        margin-inline: auto;
+      }
+      .hero-cta-wrap {
+        display: flex;
+        justify-content: center;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
     }
 
     @media (max-width: 768px) {
-      .tl::before {
-        left: auto; right: 20px;
+      .main-nav {
+        height: 66px;
       }
-      .tl-item, .tl-item:nth-child(even) {
-        justify-content: flex-start;
+      .nav-logo img {
+        height: 44px;
       }
-      .tl-marker {
-        left: auto; right: 20px;
-        transform: translate(50%, -50%);
-        width: 36px; height: 36px; font-size: 0.7rem;
+      .hero {
+        padding-top: 6.2rem;
+        padding-bottom: 3.5rem;
       }
-      .tl-content {
-        width: calc(100% - 60px);
-        margin-right: 60px;
-        border-right: 4px solid var(--accent) !important;
-        border-left: none !important;
+      section {
+        padding: 4rem 0;
       }
     }
 
-    /* ═══════════════════════════════════════════════════════════════
-       SECTION 2: המרכז (ארגוני, ממשלתי, חוק המרכז, דוחות)
-       ═══════════════════════════════════════════════════════════════ */
-    .org-section { background: var(--surface); border-block: 1px solid var(--rule); }
-    .org-header { text-align: center; max-width: 650px; margin-inline: auto; margin-bottom: 3rem; }
-    
-    .tabs-nav {
-      display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;
-    }
-    .tab-btn {
-      padding: 0.6rem 1.2rem; font-family: var(--font-body); font-size: 0.95rem; font-weight: 600;
-      background: var(--bg); border: 1px solid var(--rule); border-radius: 6px; cursor: pointer;
-      color: var(--muted); transition: all 0.25s ease;
-    }
-    .tab-btn.active, .tab-btn:hover { background: var(--accent); color: #ffffff; border-color: var(--accent); }
-
-    .tab-content { display: none; }
-    .tab-content.active { display: block; animation: fade-up 0.4s var(--ease); }
-
-    .org-card-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;
-    }
-    .org-card {
-      background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 2rem;
-      display: flex; flex-direction: column; gap: 0.8rem;
-      transition: all 0.3s var(--ease);
-      border-top: 3px solid transparent;
-      position: relative; overflow: hidden;
-    }
-    .org-card::after {
-      content: ""; position: absolute; top:0; left:0; right:0; bottom:0;
-      background: linear-gradient(135deg, transparent, var(--accent-light));
-      opacity: 0; transition: opacity 0.3s; pointer-events: none;
-    }
-    .org-card:hover { 
-      transform: translateY(-4px) scale(1.02); 
-      border-color: var(--rule-strong);
-      border-top-color: var(--accent); 
-      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08); 
-    }
-    .org-card:hover::after { opacity: 1; }
-    .org-card h4 { font-family: var(--font-display); font-size: 1.3rem; color: var(--accent); z-index: 1; }
-    .org-card p { font-size: 0.95rem; color: var(--muted); line-height: 1.65; z-index: 1; }
-
-    /* ═══════════════════════════════════════════════════════════════
-       SECTION 3: לבקר במרכז (שעות, כרטיסים, משלחות, קהלים)
-       ═══════════════════════════════════════════════════════════════ */
-    .visit-section { background: var(--bg); }
-    .visit-grid {
-      display: grid; grid-template-columns: 1fr; gap: 2.5rem;
-    }
-    @media (min-width: 900px) { .visit-grid { grid-template-columns: 1fr 1fr; } }
-    
-    .visit-info-box {
-      background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 2.5rem;
-      display: flex; flex-direction: column; gap: 1.2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    }
-    .visit-row { display: flex; gap: 1.2rem; align-items: flex-start; padding-bottom: 1.2rem; border-bottom: 1px solid var(--rule); }
-    .visit-row:last-of-type { border-bottom: none; }
-    .visit-icon {
-      width: 48px; height: 48px; border-radius: 10px; background: var(--accent-light); color: var(--accent);
-      display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;
-    }
-    .visit-detail h5 { font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: 0.3rem;}
-    .visit-detail p { font-size: 0.95rem; color: var(--muted); }
-
-    /* Audience Grid */
-    .audience-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-top: 1.5rem;
-    }
-    .audience-chip {
-      background: var(--surface-2); border: 1px solid var(--rule); border-radius: 8px; padding: 1rem;
-      text-align: center; font-size: 0.95rem; font-weight: 600; color: var(--ink);
-      transition: all 0.2s;
-    }
-    .audience-chip:hover {
-      background: var(--accent); color: #fff; transform: translateY(-2px);
-    }
-
-    /* ═══════════════════════════════════════════════════════════════
-       SECTION 4: חינוך (ערכות, אסופה, כרזות, סרטים, ימי עיון)
-       ═══════════════════════════════════════════════════════════════ */
-    .edu-section { background: var(--surface); border-block: 1px solid var(--rule); }
-    .edu-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;
-    }
-    .edu-card {
-      background: var(--bg); border: 1px solid var(--rule); border-radius: 12px; padding: 2rem;
-      display: flex; flex-direction: column; gap: 1rem; transition: all 0.3s var(--ease);
-      border-top: 4px solid transparent;
-      position: relative; overflow: hidden;
-    }
-    .edu-card::before {
-      content: ""; position: absolute; top:0; left:0; right:0; bottom:0;
-      background: linear-gradient(180deg, transparent, var(--accent-light));
-      opacity: 0; transition: opacity 0.3s; pointer-events: none;
-    }
-    .edu-card:hover { 
-      transform: translateY(-5px) scale(1.02); 
-      border-top-color: var(--accent); 
-      box-shadow: 0 15px 30px rgba(15,23,42,0.06);
-    }
-    .edu-card:hover::before { opacity: 1; }
-    .edu-card-tag {
-      font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); background: var(--accent-light);
-      padding: 0.3rem 0.8rem; border-radius: 4px; align-self: flex-start; z-index: 1;
-    }
-    .edu-card h4 { z-index: 1; font-size: 1.2rem; }
-    .edu-card p { z-index: 1; font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
-
-    /* ═══════════════════════════════════════════════════════════════
-       SECTION 5: אירועים ותערוכות (לוח מתעדכן שוטף)
-       ═══════════════════════════════════════════════════════════════ */
-    .events-section { background: var(--bg); }
-    .events-list { display: flex; flex-direction: column; gap: 1.5rem; max-width: 900px; margin: 0 auto; }
-    .event-row {
-      background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 2rem;
-      display: grid; grid-template-columns: 120px 1fr auto; gap: 2rem; align-items: center;
-      transition: all 0.3s var(--ease);
-    }
-    .event-row:hover {
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      border-color: var(--accent);
-    }
-    @media (max-width: 700px) { 
-      .event-row { grid-template-columns: 1fr; text-align: center; gap: 1rem; padding: 1.5rem; } 
-      .event-date { border-inline-end: none !important; border-bottom: 2px solid var(--rule); padding-bottom: 1rem; }
-    }
-    .event-date {
-      font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700; color: var(--accent);
-      text-align: center; border-inline-end: 2px solid var(--rule); padding-inline-end: 1rem;
-    }
-    .event-info h4 { font-size: 1.3rem; margin-bottom: 0.4rem; }
-    .event-info p { font-size: 0.95rem; color: var(--muted); }
-
-    /* ═══════════════════════════════════════════════════════════════
-       CONDITIONAL SECTION: אודות המוזיאון
-       ═══════════════════════════════════════════════════════════════ */
-    .museum-section {
-      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-      color: #ffffff; padding-block: clamp(4rem, 8vh, 7rem);
-      position: relative; overflow: hidden;
-    }
-    .museum-badge-conditional {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(217, 119, 6, 0.2); border: 1px solid #D97706; color: #FBBF24;
-      font-family: var(--font-mono); font-size: 0.78rem; padding: 0.4rem 1rem; border-radius: 6px; margin-bottom: 1.5rem;
-    }
-    .museum-section h2 { color: #ffffff; }
-    .museum-section p { color: rgba(255,255,255,0.85); font-size: 1.05rem; line-height: 1.7; }
-    .museum-rooms {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3rem;
-    }
-    .museum-room-card {
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; gap: 0.8rem;
-      transition: all 0.3s;
-    }
-    .museum-room-card:hover {
-      background: rgba(255,255,255,0.08); border-color: rgba(96, 165, 250, 0.5);
-      box-shadow: 0 0 20px rgba(96, 165, 250, 0.15);
-      transform: translateY(-5px);
-    }
-    .museum-room-card h4 { color: #60A5FA; font-size: 1.2rem; }
-    .museum-room-card p { font-size: 0.95rem; color: rgba(255,255,255,0.7); }
-
-    /* ═══════════════════════════════════════════════════════════════
-       SECTION 6: תמיכה וקהילה
-       ═══════════════════════════════════════════════════════════════ */
-    .community-section { 
-      background: linear-gradient(to bottom, var(--surface), #FFFBF0); 
-      border-block: 1px solid var(--rule);
-    }
-    .donation-tiers {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem; margin: 3rem 0;
-    }
-    .tier-card {
-      background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 2.5rem 2rem;
-      text-align: center; transition: all 0.3s;
-      display: flex; flex-direction: column; align-items: center; gap: 1rem;
-    }
-    .tier-card:hover { transform: translateY(-5px); border-color: var(--gold); box-shadow: 0 15px 30px rgba(217, 119, 6, 0.1); }
-    .tier-name { font-size: 1.4rem; font-family: var(--font-display); font-weight: 700; color: var(--ink); }
-    .tier-amount { font-family: var(--font-mono); font-size: 2rem; color: var(--accent); font-weight: 700; }
-    .tier-desc { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; }
-    
-    /* ═══════════════════════════════════════════════════════════════
-       SECTION 7: יצירת קשר (טופס + וואטסאפ)
-       ═══════════════════════════════════════════════════════════════ */
-    .contact-section { background: var(--bg); }
-    .contact-grid {
-      display: grid; grid-template-columns: 1fr; gap: 3rem;
-    }
-    @media (min-width: 900px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
-
-    .form-card {
-      background: var(--surface); padding: 2.5rem; border-radius: 12px; border: 1px solid var(--rule);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-    }
-    .form-card h3 { margin-bottom: 1.5rem; }
-    .fg { position: relative; margin-bottom: 1.5rem; }
-    .fg-label { 
-      position: absolute; top: -0.5rem; right: 1rem; background: var(--surface); padding: 0 0.4rem;
-      font-size: 0.8rem; color: var(--muted); font-weight: 600; 
-      transition: color 0.2s;
-    }
-    .fg-input, .fg-textarea {
-      width: 100%;
-      background: transparent; border: 1.5px solid var(--rule-strong); color: var(--ink);
-      font-family: var(--font-body); font-size: 1rem; padding: 1rem; border-radius: 8px; outline: none;
-      transition: all 0.3s;
-    }
-    .fg-input:focus, .fg-textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-light); }
-    .fg-input:focus ~ .fg-label, .fg-textarea:focus ~ .fg-label { color: var(--accent); }
-    
-    .form-card .btn-primary { width: 100%; padding: 1rem; font-size: 1.1rem; }
-
-    /* ═══════════════════════════════════════════════════════════════
-       FOOTER
-       ═══════════════════════════════════════════════════════════════ */
-    .footer {
-      background: var(--navy); color: rgba(255, 255, 255, 0.75);
-      padding-block: clamp(3.5rem, 6vw, 5rem) 1.8rem;
-    }
-    .footer h3 { color: #ffffff; margin-bottom: 1rem; font-size: 1.2rem; }
-    .footer a { color: rgba(255, 255, 255, 0.75); text-decoration: none; transition: color 0.2s; }
-    .footer a:hover { color: #ffffff; text-decoration: underline; text-underline-offset: 4px; }
-    .footer-grid {
-      display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 3rem;
-    }
-    @media (min-width: 768px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; } }
-    
-    .footer-links ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.12); padding-top: 1.5rem;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
-      font-size: 0.85rem; color: rgba(255, 255, 255, 0.45);
-    }
-    
-    .back-to-top {
-      position: fixed; bottom: 30px; left: 30px;
-      width: 50px; height: 50px; border-radius: 50%;
-      background: var(--accent); color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem; text-decoration: none;
-      box-shadow: 0 10px 20px rgba(29, 78, 216, 0.3);
-      opacity: 0; visibility: hidden; transition: all 0.3s;
-      z-index: 500;
-    }
-    .back-to-top.visible { opacity: 1; visibility: visible; }
-    .back-to-top:hover { transform: translateY(-5px); background: var(--accent-hover); }
-
-    /* ═══════════════════════════════════════════════════════════════
-       PRINT STYLES
-       ═══════════════════════════════════════════════════════════════ */
-    @media print {
-      .top-action-bar, .main-nav, .hero-actions, .mobile-menu-btn, .mobile-nav-panel, .back-to-top, .footer {
-        display: none !important;
+    @media (max-width: 600px) {
+      .form-row-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
       }
-      body { background: #fff; color: #000; }
-      .container { max-width: 100%; padding: 0; }
-      section { padding-block: 2rem; page-break-inside: avoid; }
-      .hero { min-height: auto; padding-top: 2rem; }
+      .contact-card {
+        padding: 1.5rem 1.25rem;
+      }
+      .institutional-quote {
+        padding: 1.25rem 1.4rem;
+        margin: 1.5rem 0;
+      }
+      .institutional-quote p {
+        font-size: 1.08rem;
+        line-height: 1.7;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .hero-logo-wrap {
+        margin-bottom: 1.5rem;
+      }
+      .btn-primary {
+        width: 100%;
+      }
+      .hero-cta-wrap {
+        width: 100%;
+      }
+      .footer-links-list {
+        columns: 1;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+      .back-to-top {
+        bottom: 1.25rem;
+        left: 1.25rem;
+        width: 40px;
+        height: 40px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER 1: TOP QUICK ACTION BAR (שורה עליונה קבועה) -->
-  <div class="top-action-bar">
-    <div class="top-action-inner">
-      <div class="top-action-tagline">
-        מרכז מורשת דוד לוי — מנהיגות, צדק חברתי וחיבור לפריפריה
-      </div>
-      <div class="top-ctas">
-        <a href="#visit" class="top-cta-btn top-cta-tickets">רכישת כרטיסים</a>
-        <a href="https://wa.me/972528991833" target="_blank" class="top-cta-btn top-cta-whatsapp">יצירת קשר בוואטסאפ</a>
-        <a href="#donate" class="top-cta-btn top-cta-donate">לתרום</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- HEADER 2: MAIN NAVIGATION (7 CATEGORIES WITH DROPDOWNS) -->
+  <!-- MAIN NAVIGATION (CLEAN SINGLE HEADER FITTING IN ONE LINE) -->
   <header class="main-nav" id="nav">
     <div class="nav-inner-container">
-      <a class="nav-logo" href="#" aria-label="מרכז דוד לוי - עמוד הבית">
-        <img src="logo2.jpg" alt="לוגו מרכז דוד לוי - סמל הפסיפס" style="width:42px; height:42px; object-fit:cover; border-radius:8px; border:1px solid rgba(29,78,216,0.2);">
+      <a class="nav-logo" href="#top" aria-label="מרכז מורשת דוד לוי - עמוד הבית">
+        <img src="david-levy-center-logo-transparent.png" alt="לוגו מרכז מורשת דוד לוי">
         <div class="logo-text-wrap">
-          <span class="logo-title-text">מרכז <span>דוד לוי</span></span>
-          <span class="logo-subtitle-text">מנהיגות · צדק חברתי · מורשת</span>
+          <span class="logo-title-text">מרכז מורשת דוד לוי</span>
         </div>
       </a>
 
-      <!-- 7 MAIN CATEGORIES -->
       <ul class="nav-categories">
-        
-        <!-- Category 1: דוד לוי -->
-        <li class="nav-item">
-          <a href="#david-levy" aria-expanded="false" aria-haspopup="true">דוד לוי</a>
-          <ul class="dropdown" role="menu">
-            <li><a href="#david-levy">רקע וביוגרפיה <span class="badge-sm">1937-2024</span></a></li>
-            <li><a href="#timeline">ציר הזמן והישגים <span class="badge-sm">37 שנים</span></a></li>
-            <li><a href="#heritage-vision">על האיש והחזון <span class="badge-sm">ערכים</span></a></li>
-            <li><a href="#archive-media">ארכיון וסרטים <span class="badge-sm">מדיה</span></a></li>
-          </ul>
-        </li>
-
-        <!-- Category 2: המרכז -->
-        <li class="nav-item">
-          <a href="#the-center" aria-expanded="false" aria-haspopup="true">המרכז</a>
-          <ul class="dropdown" role="menu">
-            <li><a href="#org-about" onclick="openTab('tab-about')">מי אנחנו</a></li>
-            <li><a href="#org-docs" onclick="openTab('tab-docs')">מסמכי יסוד</a></li>
-            <li><a href="#org-reports" onclick="openTab('tab-reports')">דוחות ותכנית עבודה 2026</a></li>
-            <li><a href="#org-law" onclick="openTab('tab-law')">חוק המרכז ומוסדות מנהלים</a></li>
-            <li><a href="#org-fund" onclick="openTab('tab-fund')">הקרן למורשת דוד לוי</a></li>
-            <li><a href="#org-transparency" onclick="openTab('tab-transparency')">שקיפות ארגונית ושותפים</a></li>
-            <li><a href="#org-tenders" onclick="openTab('tab-tenders')">דרושים ומכרזים</a></li>
-          </ul>
-        </li>
-
-        <!-- Category 3: לבקר במרכז -->
-        <li class="nav-item">
-          <a href="#visit" aria-expanded="false" aria-haspopup="true">לבקר במרכז</a>
-          <ul class="dropdown" role="menu">
-            <li><a href="#visit-info">מידע למבקר (שעות ונגישות)</a></li>
-            <li><a href="#visit-tickets">רכישת כרטיסים</a></li>
-            <li><a href="#visit-groups">קבוצות, משלחות ואירועים</a></li>
-            <li><a href="#visit-audiences">מבקרים לפי קהל יעד</a></li>
-          </ul>
-        </li>
-
-        <!-- Category 4: חינוך -->
-        <li class="nav-item">
-          <a href="#education" aria-expanded="false" aria-haspopup="true">חינוך</a>
-          <ul class="dropdown" role="menu">
-            <li><a href="#education">ערכות חינוכיות</a></li>
-            <li><a href="#education">אסופת זיכרון וכרזות</a></li>
-            <li><a href="#education">סרטים וימי עיון לתלמידים</a></li>
-          </ul>
-        </li>
-
-        <!-- Category 5: אירועים ותערוכות -->
-        <li class="nav-item no-drop">
-          <a href="#events">אירועים ותערוכות</a>
-        </li>
-
-        <!-- Category 6: תמיכה וקהילה -->
-        <li class="nav-item">
-          <a href="#community" aria-expanded="false" aria-haspopup="true">תמיכה וקהילה</a>
-          <ul class="dropdown" role="menu">
-            <li><a href="#donate">חוג ידידים ותרומות</a></li>
-            <li><a href="#newsletter">הצטרפו לניוזלטר</a></li>
-            <li><a href="#community">חדשות, הזדמנויות וסיפורים</a></li>
-          </ul>
-        </li>
-
-        <!-- Category 7: יצירת קשר -->
-        <li class="nav-item no-drop">
-          <a href="#contact">יצירת קשר</a>
-        </li>
-
+        <li class="nav-item"><a href="#master-intro">מבוא</a></li>
+        <li class="nav-item"><a href="#david-levy-man">דוד לוי – האיש</a></li>
+        <li class="nav-item"><a href="#achievements">תפקידים והישגים</a></li>
+        <li class="nav-item"><a href="#legacy">מורשת</a></li>
+        <li class="nav-item"><a href="#vision">חזון</a></li>
+        <li class="nav-item"><a href="#foundation-pillars">אבני יסוד</a></li>
       </ul>
 
-      <button class="mobile-menu-btn" id="mobile-menu-open" aria-label="פתח תפריט מובייל" aria-expanded="false">☰</button>
+      <div class="nav-end-actions">
+        <a href="#contact" class="nav-contact-link">יצירת קשר</a>
+        <a href="#tenders-placeholder" class="btn-header-cta">קול קורא ומכרזים</a>
+        <button class="mobile-menu-btn" id="mobile-menu-open" aria-label="פתח תפריט ניווט" aria-expanded="false">תפריט</button>
+      </div>
     </div>
   </header>
 
@@ -1110,167 +810,570 @@
   <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
   <div class="mobile-nav-panel" id="mobile-nav-panel" role="dialog" aria-modal="true">
     <div class="mobile-nav-header">
-      <div class="logo-text-wrap">
-        <span class="logo-title-text" style="font-size:1.1rem;">מרכז <span>דוד לוי</span></span>
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <img src="david-levy-center-logo-transparent.png" alt="לוגו מרכז מורשת דוד לוי" style="height:44px; width:auto; object-fit:contain;">
+        <div class="logo-text-wrap">
+          <span class="logo-title-text" style="font-size:1.15rem;">מרכז מורשת דוד לוי</span>
+        </div>
       </div>
-      <button class="mobile-nav-close" id="mobile-menu-close" aria-label="סגור תפריט">✕</button>
+      <button class="mobile-nav-close" id="mobile-menu-close" aria-label="סגור תפריט">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
     </div>
     <ul class="mobile-menu-list">
-      <li class="mobile-menu-item">
-        <a href="#david-levy" class="mobile-menu-link" data-toggle="true">דוד לוי</a>
-        <ul class="mobile-sub-menu">
-          <li><a href="#david-levy">רקע וביוגרפיה</a></li>
-          <li><a href="#timeline">ציר הזמן והישגים</a></li>
-          <li><a href="#heritage-vision">על האיש והחזון</a></li>
-          <li><a href="#archive-media">ארכיון וסרטים</a></li>
-        </ul>
-      </li>
-      <li class="mobile-menu-item">
-        <a href="#the-center" class="mobile-menu-link" data-toggle="true">המרכז</a>
-        <ul class="mobile-sub-menu">
-          <li><a href="#org-about" onclick="openTab('tab-about')">מי אנחנו</a></li>
-          <li><a href="#org-docs" onclick="openTab('tab-docs')">מסמכי יסוד</a></li>
-          <li><a href="#org-reports" onclick="openTab('tab-reports')">דוחות ותכנית עבודה</a></li>
-          <li><a href="#org-law" onclick="openTab('tab-law')">חוק המרכז ומוסדות</a></li>
-        </ul>
-      </li>
-      <li class="mobile-menu-item">
-        <a href="#visit" class="mobile-menu-link" data-toggle="true">לבקר במרכז</a>
-        <ul class="mobile-sub-menu">
-          <li><a href="#visit-info">מידע למבקר</a></li>
-          <li><a href="#visit-tickets">רכישת כרטיסים</a></li>
-          <li><a href="#visit-groups">קבוצות, משלחות ואירועים</a></li>
-        </ul>
-      </li>
-      <li class="mobile-menu-item">
-        <a href="#education" class="mobile-menu-link" data-toggle="true">חינוך</a>
-        <ul class="mobile-sub-menu">
-          <li><a href="#education">ערכות חינוכיות</a></li>
-          <li><a href="#education">אסופת זיכרון</a></li>
-        </ul>
-      </li>
-      <li class="mobile-menu-item">
-        <a href="#events" class="mobile-menu-link">אירועים ותערוכות</a>
-      </li>
-      <li class="mobile-menu-item">
-        <a href="#community" class="mobile-menu-link" data-toggle="true">תמיכה וקהילה</a>
-        <ul class="mobile-sub-menu">
-          <li><a href="#donate">תרומות</a></li>
-          <li><a href="#newsletter">ניוזלטר</a></li>
-        </ul>
-      </li>
-      <li class="mobile-menu-item">
-        <a href="#contact" class="mobile-menu-link">יצירת קשר</a>
-      </li>
+      <li class="mobile-menu-item"><a href="#master-intro" class="mobile-menu-link">מבוא</a></li>
+      <li class="mobile-menu-item"><a href="#david-levy-man" class="mobile-menu-link">דוד לוי – האיש</a></li>
+      <li class="mobile-menu-item"><a href="#achievements" class="mobile-menu-link">תפקידים ציבוריים והישגים</a></li>
+      <li class="mobile-menu-item"><a href="#legacy" class="mobile-menu-link">מורשתו של דוד לוי</a></li>
+      <li class="mobile-menu-item"><a href="#vision" class="mobile-menu-link">חזון המרכז</a></li>
+      <li class="mobile-menu-item"><a href="#foundation-pillars" class="mobile-menu-link">אבני יסוד ופעילות המרכז</a></li>
+      <li class="mobile-menu-item"><a href="#tenders-placeholder" class="mobile-menu-link" style="color:var(--accent); font-weight:700;">קול קורא ומכרזים</a></li>
+      <li class="mobile-menu-item"><a href="#contact" class="mobile-menu-link">יצירת קשר והערות</a></li>
     </ul>
     <div class="mobile-nav-footer">
-      <a href="#visit" class="top-cta-btn top-cta-tickets">רכישת כרטיסים</a>
-      <a href="https://wa.me/972528991833" target="_blank" class="top-cta-btn top-cta-whatsapp">יצירת קשר בוואטסאפ</a>
-      <a href="#donate" class="top-cta-btn top-cta-donate">לתרום</a>
+      <a href="#tenders-placeholder" class="btn-header-cta">קול קורא ומכרזים</a>
+      <a href="#contact" class="btn-primary" style="background:var(--surface-2); color:var(--navy); border:1px solid var(--rule-strong);">יצירת קשר</a>
     </div>
   </div>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION (CO-EQUAL HEROES: 450PX LOGO ALONGSIDE 450PX PICTURE) -->
   <header class="hero" id="top">
     <div class="hero-stripe"></div>
     <div class="container">
       <div class="hero-grid">
-        <div class="hero-text">
-          <div class="label rv">מסמך יסוד · מרכז מורשת דוד לוי (1937–2024)</div>
-          <h1 class="rv rv-d1">צדק חברתי,<br><em>מנהיגות ממלכתית</em></h1>
-          <p class="hero-sub rv rv-d2">להנציח, לשמר ולהנחיל לדורות הבאים את פועלו הציבורי, החברתי והממלכתי של דוד לוי ז"ל — ממנהיגיה הבולטים של מדינת ישראל, אשר צמח מעיירת הפיתוח בית שאן והגיע לפסגות ההנהגה הלאומית.</p>
-          <div class="hero-actions rv rv-d3">
-            <a href="#david-levy" class="btn-primary">גלו את המורשת והחזון</a>
-            <a href="#visit" class="btn-outline">תכננו ביקור במרכז</a>
+        <div class="hero-content-side">
+          <div class="badge-status rv">אתר זמני בהקמה</div>
+          <h1 class="hero-logo-wrap rv rv-d1" style="font-size:0; line-height:0; margin:0 0 2rem 0;">
+            <img src="david-levy-center-logo-transparent.png" class="hero-logo-img" alt="מרכז מורשת דוד לוי">
+          </h1>
+          <div class="hero-cta-wrap rv rv-d2">
+            <a href="#tenders-placeholder" class="btn-primary">
+              קול קורא ומכרזים &larr;
+            </a>
           </div>
         </div>
-        <div class="hero-img-container rv rv-d4" id="hero-img-wrapper">
+
+        <div class="hero-portrait-side rv rv-d2">
           <div class="hero-frame">
-            <div class="hero-badge">פרס ישראל 2018</div>
-            <img src="images/portrait.png" alt="דוד לוי ז״ל, דיוקן ממלכתי" loading="eager">
-            <div class="hero-frame-caption">דוד לוי ז״ל (1937–2024) — חתן פרס ישראל למפעל חיים</div>
+            <img src="images/david_levy_official.jpg" alt="דוד לוי ז״ל, תמונה רשמית" loading="eager">
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- STATS RIBBON -->
-  <div class="stats">
+  <!-- =================================================================
+       מבוא (100% VERBATIM FROM OFFICIAL MASTER DOCUMENT)
+       ================================================================= -->
+  <section class="section-bg-white" id="master-intro">
     <div class="container">
-      <div class="stats-row">
-        <div class="stat rv">
-          <div class="stat-num-wrapper">
-            <span class="stat-num" data-target="37">0</span><span class="stat-plus">+</span>
-          </div>
-          <div class="stat-txt">שנות כהונה בכנסת ישראל</div>
-        </div>
-        <div class="stat rv rv-d1">
-          <div class="stat-num-wrapper">
-            <span class="stat-num" data-target="160">0</span><span class="stat-plus">+</span>
-          </div>
-          <div class="stat-txt">שכונות שוקמו בפרויקט השיקום</div>
-        </div>
-        <div class="stat rv rv-d2">
-          <div class="stat-num-wrapper">
-            <span class="stat-num" data-target="230">0</span><span class="stat-plus">+</span>
-          </div>
-          <div class="stat-txt">יישובים חדשים שהוקמו</div>
-        </div>
-        <div class="stat rv rv-d3">
-          <div class="stat-num-wrapper">
-            <span class="stat-num" data-target="34">0</span><span class="stat-plus">+</span>
-          </div>
-          <div class="stat-txt">מדינות עמן כונן יחסים כשר חוץ</div>
-        </div>
+      <div class="org-header">
+        <h2 class="rv">מבוא</h2>
+        <div class="doc-date rv rv-d1">30 יולי 2026 · טז' אב תשפ"ו</div>
+      </div>
+
+      <div class="doc-card rv rv-d2" style="max-width: 960px; margin: 0 auto; padding: clamp(2rem, 4vw, 3rem);">
+        <p style="font-size: 1.15rem; line-height: 1.95; color: var(--navy); font-weight: 500;">
+          מרכז מורשת דוד לוי נועד להנציח, לשמר ולהנחיל לדורות הבאים את פועלו הציבורי, האישי והחברתי של דוד לוי. ממנהיגיה הבולטים של מדינת ישראל, אשר צמח מתוך עיירת הפיתוח בית שאן והגיע לפסגות ההנהגה הלאומית. סיפור חייו מגלם את חזון קיבוץ הגלויות, ההשתלבות בחברה הישראלית, המחויבות לצדק חברתי ולשוויון הזדמנויות, ואת האמונה כי כל אדם יכול להגיע להישגים בזכות התמדה, יושר, עבודה קשה ונאמנות לערכיו ומעל לכל בזכות תחושת השליחות לפעול למען שלימות ארצו ועמו.
+        </p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       CATEGORY 1: דוד לוי (האיש, הדרך, הביוגרפיה, ארכיון וסרטים)
-       ═══════════════════════════════════════════════════════════════ -->
-  <section id="david-levy">
+  <!-- =================================================================
+       דוד לוי – האיש (100% VERBATIM FROM OFFICIAL MASTER DOCUMENT)
+       ================================================================= -->
+  <section class="section-bg-alt" id="david-levy-man">
     <div class="container">
-      <div class="bio-grid">
-        <div class="bio-img rv">
-          <img src="images/story_image.png" alt="דוד לוי בתחילת דרכו הציבורית">
-        </div>
-        <div class="bio-text">
-          <div class="label rv">דוד לוי — האיש והמורשת</div>
-          <h2 class="rv rv-d1">מי היה דוד לוי ולמה מוקדש לו <em>מרכז המורשת?</em></h2>
-          <p class="rv rv-d2"><strong>דוד לוי נולד ברבאט שבמרוקו בשנת 1937</strong> למשפחה מסורתית וציונית. בשנת 1957 עלה לישראל במסגרת גלי העלייה מצפון אפריקה. המשפחה התיישבה בעיירת הפיתוח בית שאן. מראשית דרכו עבד בעבודות כפיים — בבנייה, בחקלאות ובייעור — והתבלט כמנהיג טבעי שנאבק למען תנאי החיים של העובדים ותושבי הפריפריה.</p>
-          <p class="rv rv-d3"><strong>המשפחה כעוגן ערכי וחברתי:</strong> הקים את ביתו בבית שאן יחד עם רעייתו רחל. בני הזוג הקימו משפחה ברוכת ילדים (תריסר ילדים). החלטתו העקרונית שלא להעתיק את מגוריו לירושלים או למרכז הארץ הייתה הצהרה חברתית ותרבותית ברורה: להישאר חלק בלתי נפרד מאנשי הפריפריה מתוך שותפות גורל מלאה. מתוך התא המשפחתי צמחו ממשיכי דרכו הציבורית: בתו השרה אורלי לוי-אבקסיס ובנו ז'קי לוי (סגן שר וראש עיריית בית שאן).</p>
-          <p class="rv rv-d4">בשנת 2018 הוענק לו <strong>פרס ישראל למפעל חיים</strong> על נשיאת קולם של מי שלא זכו לייצוג ממשי ועל פועלו ללא לאות לצמצום פערים חברתיים. ביום 2 ביוני 2024 הלך לעולמו בגיל 86, כשהוא מותיר מורשת ממלכתית וחברתית חיה.</p>
-        </div>
+      <div class="org-header">
+        <h2 class="rv">דוד לוי – האיש</h2>
       </div>
 
-      <div class="section-divider rv"></div>
+      <div style="display: flex; flex-direction: column; gap: 2rem; max-width: 960px; margin: 0 auto;">
+        <div class="doc-card rv" style="padding: clamp(2rem, 4vw, 3rem);">
+          <p style="font-size: 1.05rem; line-height: 1.9; color: var(--ink); margin-bottom: 1.5rem;">
+            דוד לוי נולד ברבאט שבמרוקו בשנת 1937 למשפחה מסורתית וציונית. בשנת 1957 עלה לישראל יחד עם משפחתו במסגרת גלי העלייה הגדולים מצפון אפריקה. המשפחה התיישבה בבית שאן, שהייתה אז עיירת פיתוח צעירה ומרוחקת ממרכזי הכוח במדינה.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.9; color: var(--ink); margin-bottom: 1.5rem;">
+            עם הגעתו לישראל עבד בעבודות כפיים, בין היתר בבנייה, בחקלאות ובייעור. כבר בגיל צעיר התבלט כמנהיג טבעי וכמי שנאבק למען תנאי החיים של העובדים ותושבי הפריפריה. פעילותו הציבורית החלה במסגרת ההסתדרות ובמישור המוניציפלי בבית שאן.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.9; color: var(--ink); margin-bottom: 1.5rem;">
+            לוי ראה עצמו כנציגם של האנשים הפשוטים – עובדים, עולים חדשים, תושבי עיירות הפיתוח ואוכלוסיות מוחלשות. הוא האמין כי מדינת ישראל חייבת להעניק לכל אזרח הזדמנות שווה להתקדם ולהצליח ללא קשר למוצאו או למקום מגוריו.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.9; color: var(--ink);">
+            בשנת 1969 נבחר לראשונה לכנסת ומאז כיהן ברציפות במשך כ 37 שנים כחבר כנסת וכשר בממשלות ישראל. על אף זכאותו בתוקף תפקידיו לדיור שרד בירושלים, המשיך להתגורר בבית שאן במשך כל חייו ושמר על קשר בלתי אמצעי עם הציבור הרחב.
+          </p>
+        </div>
 
-      <!-- Archive & Movies Sub-Module -->
-      <div class="media-box rv" id="archive-media">
-        <div class="label">ארכיון וסרטים — חומרים היסטוריים</div>
-        <h3 style="margin-top:0.8rem;">אסופת נאומים, תצלומים וסרטי תיעוד</h3>
-        <div class="media-grid">
-          <a href="#" class="media-card">
-            <div class="media-card-title">נאום השר בכנסת (1981)</div>
-            <div class="media-card-desc">נאום היסטורי על פרויקט שיקום השכונות והחיבור לפריפריה.</div>
-          </a>
-          <a href="#" class="media-card">
-            <div class="media-card-title">מכתבים וכתבי יד נדירים</div>
-            <div class="media-card-desc">חופש הביטוי, שוויון הזדמנויות והתכתבויות עם מנהיגי עולם.</div>
-          </a>
-          <a href="#" class="media-card">
-            <div class="media-card-title">ועידת מדריד (1991)</div>
-            <div class="media-card-desc">תיעוד דיפלומטי נדיר של משלחת ישראל בראשות שר החוץ דוד לוי.</div>
-          </a>
+        <div class="doc-card doc-card-gold rv" style="padding: clamp(2rem, 4vw, 3rem);">
+          <h3 style="color: var(--navy); margin-bottom: 1.25rem;">המשפחה היתה תמיד העוגן בחייו</h3>
+          <p style="font-size: 1.05rem; line-height: 1.9; color: var(--ink); margin-bottom: 1.5rem;">
+            במקביל לפועלו הציבורי, הקים דוד לוי את ביתו בבית שאן יחד עם רעייתו רחל. בני הזוג הקימו משפחה ברוכת ילדים (תריסר), אשר היוותה עבורו לאורך כל השנים עוגן רגשי וערכי מדרגה ראשונה. החלטתו העקרונית שלא להעתיק את מגוריו למרכז הארץ או לדירת שרד בירושלים הייתה הצהרה חברתית ותרבותית ברורה: הוא נותר חלק בלתי נפרד מאנשי הפריפריה וייצג אותם מתוך שותפות גורל מלאה.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.9; color: var(--ink);">
+            מתוך התא המשפחתי החם והערכי שגידל, צמחו גם אנשי ציבור שהמשיכו את דרכו הממלכתית, בתו השרה אורלי לוי אבקסיס ובנו ז'קי לוי, סגן השר וראש עירית בית שאן. רעייתו רחל עמדה לצדו לאורך כל תחנות חייו, תמכה בפעילותו הציבורית והיוותה שותפה מלאה לדרך החיים הצנועה והמחויבת שהוביל.
+          </p>
+        </div>
+
+        <div class="doc-card doc-card-accent rv" style="padding: clamp(2rem, 4vw, 3rem);">
+          <p style="font-size: 1.05rem; line-height: 1.9; color: var(--ink); margin-bottom: 1.5rem;">
+            בשנת 2018 הוענק לדוד לוי פרס ישראל על מפעל חיים, בתחום התרומה לחברה ולקהילה. הוועדה תיארה את דוד לוי כמי שהשמיע לאורך שנים את קולם של מי שקודם לפעילותו לא זכו לייצוג ממשי בשיח הציבורי, וכמי שפעל ללא לאות למען צמצום פערים חברתיים ולמען שוויון הזדמנויות.
+          </p>
+          <p style="font-size: 1.05rem; line-height: 1.9; color: var(--navy); font-weight: 600;">
+            ביום 2 ביוני 2024 הלך דוד לוי לעולמו בגיל 86. מורשתו הייחודית ממשיכה להוות מקור השראה למנהיגות ציבורית המחוברת לעם, לערכי השוויון ולמחויבות עמוקה למדינת ישראל ולעם היהודי.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TIMELINE MODULE -->
-  <section class="timeline" id="timeline">
+  <!-- =================================================================
+       תפקידיו הציבוריים והממלכתיים הישגים מרכזיים (100% VERBATIM)
+       ================================================================= -->
+  <section class="section-bg-white" id="achievements">
+    <div class="container">
+      <div class="org-header">
+        <h2 class="rv">תפקידיו הציבוריים והממלכתיים הישגים מרכזיים</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 2rem; max-width: 960px; margin: 0 auto;">
+        
+        <!-- שר העלייה והקליטה -->
+        <div class="doc-card rv">
+          <h3 style="color: var(--navy); margin-bottom: 1.25rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.75rem;">
+            שר העלייה והקליטה (1977–1981)
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">הובלת רפורמה במבנה הקליטה:</strong>
+              <p style="margin: 0; color: var(--ink); line-height: 1.85;">שינוי שיטות הקליטה הנוקשות והפניית משאבים מוגברים לטובת ליווי אישי, תעסוקתי ותרבותי של עולים ממגוון מדינות.</p>
+            </div>
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">הכנת התשתיות לעליות הגדולות:</strong>
+              <p style="margin: 0; color: var(--ink); line-height: 1.85;">הנחת היסודות המערכתיים שאפשרו למדינת ישראל לקלוט בהמשך גלי עלייה רחבים, תוך מאבק על פיזור אוכלוסין נכון ומכבד.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- שר הבינוי והשיכון -->
+        <div class="doc-card doc-card-gold rv">
+          <h3 style="color: var(--navy); margin-bottom: 1.25rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.75rem;">
+            שר הבינוי והשיכון (1979–1990)
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">הקמת פרויקט שיקום השכונות:</strong>
+              <p style="margin: 0; color: var(--ink); line-height: 1.85;">מפעל לאומי רחב היקף ששינה את פניהן של כ 160 שכונות מצוקה ועיירות פיתוח, תוך שילוב שיקום פיזי עם שיקום חברתי ותרבותי.</p>
+            </div>
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">הרחבת פתרונות הדיור הציבורי:</strong>
+              <p style="margin: 0; color: var(--ink); line-height: 1.85;">הובלת תוכניות סיוע, משכנתאות מסובסדות ובנייה מאסיבית עבור זוגות צעירים ועולים חדשים.</p>
+            </div>
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">הרחבת ההתיישבות:</strong>
+              <p style="margin: 0; color: var(--ink); line-height: 1.85;">הקמת 230 יישובים חדשים: כ 60 יישובים בגליל, 50 יישובים בנגב ובשפלה, 120 יישובים בגולן, ביהודה, בשומרון ובחבל עזה.</p>
+            </div>
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">ביצורה, איחודה ופיתוחה של ירושלים:</strong>
+              <p style="margin: 0; color: var(--ink); line-height: 1.85;">בנייה רחבת ממדים בירושלים, במזרחה ובמעטפת העיר להנצחת האחיזה היהודית בהר הבית והרחבת גבולותיה. שיקומו של הרובע היהודי בעיר העתיקה. הפיכת ירושלים לעיר הגדולה בישראל.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- סגן ראש ממשלת ישראל -->
+        <div class="doc-card rv">
+          <h3 style="color: var(--navy); margin-bottom: 1.25rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.75rem;">
+            סגן ראש ממשלת ישראל
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">איזון חברתי בהחלטות הממשלה:</strong>
+              <p style="margin: 0; color: var(--ink); line-height: 1.85;">שימוש בכוחו הפוליטי כסגן רה"מ כדי לשמש כ"מצפן חברתי", תוך בלימת גזירות כלכליות ואישור תקציבים מוכווני רווחה וחינוך לפריפריה.</p>
+            </div>
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">גישור וייצוב קואליציוני:</strong>
+              <p style="margin: 0; color: var(--ink); line-height: 1.85;">מילוי תפקיד מפתח בניהול משברים פוליטיים פנימיים, שמירה על אחדות העם לצד יציבות הממשל וייצוג קולו של הציבור המזרחי והמסורתי סביב שולחן קבלת ההחלטות.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- שר החוץ וחבר כנסת -->
+        <div class="doc-card doc-card-navy rv">
+          <h3 style="color: var(--navy); margin-bottom: 1.25rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.75rem;">
+            שר החוץ (1990–1992, 1996–1998, 1999–2000) וחבר כנסת במשך 37 שנים
+          </h3>
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">תנופה מדינית:</strong>
+              <p style="margin: 0; color: var(--ink); line-height: 1.85;">כינון יחסים דיפלומטיים עם 34 מדינות בעולם בהן סין, הודו, רוסיה, מדינות מזרח אירופה, לרבות הרפובליקות המוסלמיות של ברית המועצות לשעבר.</p>
+            </div>
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">ביטול החלטת האו"ם המשווה ציונות לגזענות.</strong>
+            </div>
+            <div>
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">הגעה להכרה בינלאומית ואישור האו"ם להערכות צהל ברצועת הבטחון (בשנת 2000).</strong>
+            </div>
+            <div style="border-top: 1px solid var(--rule); padding-top: 1rem; margin-top: 0.5rem;">
+              <strong style="color: var(--navy); font-size: 1.08rem; display: block; margin-bottom: 0.35rem;">חבר כנסת במשך 37 שנים:</strong>
+              <p style="margin: 0; color: var(--ink); line-height: 1.85;">נציג עקבי ומחויב של הפריפריה החברתית והגיאוגרפית. סמל למאבק אמיץ לפריצת תקרת הזכוכית להשתלבות בני עדות המזרח בצמרת ההנהגה הלאומית.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       מורשתו של דוד לוי (100% VERBATIM)
+       ================================================================= -->
+  <section class="section-bg-alt" id="legacy">
+    <div class="container">
+      <div class="org-header">
+        <h2 class="rv">מורשתו של דוד לוי</h2>
+      </div>
+
+      <div class="doc-card rv" style="max-width: 960px; margin: 0 auto 3.5rem; background: var(--surface);">
+        <p style="font-size: 1.15rem; line-height: 1.95; color: var(--navy); font-weight: 500;">
+          מורשתו של דוד לוי היא שילוב ייחודי של חתירה בלתי מתפשרת לצדק חברתי, ממלכתיות, כבוד אנושי ותרבותי המבוססת על האמונה כי עוצמתה של מדינה ישראל נובעת מהיכולת לחבר בין כל חלקי החברה, לכבד כל אדם, להקשיב לחלשים, לצמצם פערים חברתיים ולבנות חברה מאוחדת, צודקת ומלוכדת. כמו פסיפס, דימוי שנהג להשתמש בו. כל פרט וכל קהילה מביאים את הצבע הייחודי שלהם וביחד יוצרים תמונה אחת שלמה.
+        </p>
+      </div>
+
+      <div style="max-width: 960px; margin: 0 auto 3.5rem;">
+        <h3 class="rv" style="margin-bottom: 2rem; text-align: center;">מורשתו באה לידי ביטוי בשלושה ממדים מרכזיים:</h3>
+        
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          <div class="doc-card rv">
+            <h4 style="color: var(--navy); margin-bottom: 0.75rem;">בחייו האישיים: שורשיות וצניעות</h4>
+            <p style="margin: 0; color: var(--ink); line-height: 1.85;">
+              דוד לוי הגדיר מחדש את מושג המנהיגות השורשית בישראל. בחירתו לחיות בבית שאן לא הייתה גימיק פוליטי, אלא ביטוי נאמן לזהותו. הוא סירב להתנתק מהאנשים ששלחו אותו, והוכיח כי ניתן להגיע לצמרת השלטון מבלי לאבד את הערכים האישיים, את השפה, את התרבות והמסורת מבית אבא. הוא נשא בגאווה את מורשת יהדות מרוקו והמזרח בתקופה שבה הדבר נחשב לחסרון פוליטי, ובכך העניק השראה והיה מקור גאווה למיליוני ישראלים.
+            </p>
+          </div>
+
+          <div class="doc-card rv">
+            <h4 style="color: var(--navy); margin-bottom: 0.75rem;">בהתנהגותו: אצילות נפש ועמידה איתנה על עקרונותיו</h4>
+            <p style="margin: 0; color: var(--ink); line-height: 1.85;">
+              דוד לוי נודע כאחד הנואמים הגדולים בתולדות המדינה. הרטוריקה שלו התאפיינה בשפה עשירה, בממלכתיות וביכולת לרתק המונים, תוך שמירה על כבוד הזולת גם מול יריבים פוליטיים. התנהגותו הציבורית הייתה קפדנית, מכובדת, מרשימה ומעוררת כבוד. עם זאת, כאשר הגיע הדבר לעקרונותיו החברתיים או המדיניים, ידע להילחם על דעותיו גם אם הדבר היה כרוך במחירים אישיים כבדים.
+            </p>
+          </div>
+
+          <div class="doc-card rv">
+            <h4 style="color: var(--navy); margin-bottom: 0.75rem;">באופן מילוי תפקידיו: המצפן החברתי והמדיני של המדינה</h4>
+            <p style="margin: 0; color: var(--ink); line-height: 1.85;">
+              בכל משרד ממשלתי בו כיהן, הביא עמו לוי תפיסת עולם שרואה באדם ובאזרח את המרכז. כשר שיכון, הוא לא ראה לנגד עיניו מערבלי בטון ודחפורים, אלא בני אדם הזכאים לחיים בכבוד. כשר חוץ, הוא ייצג את ישראל בעולם בראש מורם ובממלכתיות, תוך שהוא מוכיח כי גם מנהיג שהחל את דרכו כפועל בנין יכול להפוך לדיפלומט מוערך בזירה הבינלאומית. הוא היה המצפן המוסרי של ממשלות ישראל, זה שמזכיר תמיד כי חוסנה של חברה נמדד בחוסנן של החוליות החלשות שבה.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-card rv" style="max-width: 960px; margin: 0 auto; background: var(--surface); padding: clamp(2rem, 4vw, 3rem);">
+        <div class="institutional-quote" style="margin: 0;">
+          <p>
+            דוד לוי ראה בשירות הציבורי שליחות ולא קריירה. הוא האמין שמנהיג חייב להישאר קשוב לציבור ולפעול מתוך מחויבות לאזרחי המדינה כולם.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       חזון המרכז (100% VERBATIM) + HIGHLIGHTED QUOTE HERO ROW UNDER POINT 6
+       ================================================================= -->
+  <section class="section-bg-white" id="vision">
+    <div class="container">
+      <div class="org-header">
+        <h2 class="rv">חזון המרכז</h2>
+      </div>
+
+      <div class="doc-card doc-card-accent rv" style="max-width: 960px; margin: 0 auto; padding: clamp(2rem, 4vw, 3rem);">
+        <div style="display: flex; flex-direction: column; gap: 1.75rem;">
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">1</span>
+            <span style="font-size: 1.08rem; line-height: 1.8; color: var(--navy); font-weight: 500;">המרכז ינציח לדורות את פועלו ומורשתו האישית והציבורית של דוד לוי.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">2</span>
+            <span style="font-size: 1.08rem; line-height: 1.8; color: var(--navy); font-weight: 500;">המרכז יפעל להנחלת ערכי הממלכתיות, הצדק החברתי, הלכידות החברתית, השוויון, אהבת ישראל וארץ ישראל.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">3</span>
+            <span style="font-size: 1.08rem; line-height: 1.8; color: var(--navy); font-weight: 500;">המרכז יספר את סיפורו יוצא הדופן של דוד לוי כהשראה לפיתוח מנהיגות צעירה.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">4</span>
+            <span style="font-size: 1.08rem; line-height: 1.8; color: var(--navy); font-weight: 500;">המרכז יפעל להנחיל לדורות הבאים את אמונתו העמוקה של דוד לוי כי לכל אדם בישראל, ללא קשר למוצאו, למקום מגוריו או למצבו הכלכלי, מגיעה הזדמנות שווה לממש את יכולותיו ולתרום למדינה.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">5</span>
+            <span style="font-size: 1.08rem; line-height: 1.8; color: var(--navy); font-weight: 500;">המרכז ישמש מוקד ללימוד, למחקר, לחינוך ולשיח ציבורי בנושאי מנהיגות, אחריות ציבורית, קליטת עלייה, פיתוח הפריפריה, העמקת הזהות יהודית והציונית, ולתרומתה של יהדות המזרח לתחיית הציונות המעשית.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">6</span>
+            <span style="font-size: 1.08rem; line-height: 1.8; color: var(--navy); font-weight: 600;">מרכז מורשת דוד לוי יטפח דור חדש של מנהיגים הרואים בשירות הציבורי שליחות, ובכבוד האדם ערך עליון תוך מתן דגש על קידום צעירי הפריפריה החברתית והגיאוגרפית.</span>
+          </div>
+        </div>
+
+        <!-- HIGHLIGHTED HERO ROW UNDER POINT 6 (AS REQUESTED) -->
+        <div class="quote-hero-banner rv rv-d1">
+          <div class="quote-hero-text">״לסדוק את תקרת הזכוכית״</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       אבני יסוד לפעילות המרכז (100% VERBATIM)
+       ================================================================= -->
+  <section class="section-bg-alt" id="foundation-pillars">
+    <div class="container">
+      <div class="org-header">
+        <h2 class="rv">אבני יסוד לפעילות המרכז</h2>
+      </div>
+
+      <!-- 5 אבני היסוד -->
+      <div style="max-width: 960px; margin: 0 auto 4rem; display: flex; flex-direction: column; gap: 1.5rem;">
+        
+        <div class="doc-card rv">
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem; display: flex; align-items: center;">
+            <span class="num-badge">1</span> הגברת המודעות
+          </h4>
+          <p style="margin: 0; color: var(--ink); line-height: 1.85;">
+            הגברת המודעות לדמותו ופועלו של דוד לוי לכלל הציבור.
+          </p>
+        </div>
+
+        <div class="doc-card rv">
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem; display: flex; align-items: center;">
+            <span class="num-badge">2</span> מנהיגות חברתית וצדק חברתי
+          </h4>
+          <p style="margin: 0; color: var(--ink); line-height: 1.85;">
+            פיתוח תוכניות חינוך והכשרה למנהיגות צעירה המבוססת על ערכי אחריות ציבורית, שוויון הזדמנויות, רגישות חברתית ושאיפה למצוינות בהשראת דמותו ופועלו של לוי.
+          </p>
+        </div>
+
+        <div class="doc-card rv">
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem; display: flex; align-items: center;">
+            <span class="num-badge">3</span> קיבוץ גלויות ועלייה
+          </h4>
+          <p style="margin: 0; color: var(--ink); line-height: 1.85;">
+            מחקר ושימור סיפורי העלייה והקליטה בישראל והנחלת תרומתן של קהילות ישראל לבניין המדינה תוך דגש על תרומתה של יהדות ספרד לתחיית הציונות המעשית ותרומתן של ערי הפיתוח למדינה.
+          </p>
+        </div>
+
+        <div class="doc-card rv">
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem; display: flex; align-items: center;">
+            <span class="num-badge">4</span> אחדות העם וגישור בין מגזרים
+          </h4>
+          <p style="margin: 0; color: var(--ink); line-height: 1.85;">
+            קידום דיאלוג בין קבוצות שונות בחברה הישראלית, חיזוק הסולידריות הלאומית והבניית שיח מכבד ומאחד.
+          </p>
+        </div>
+
+        <div class="doc-card rv">
+          <h4 style="color: var(--navy); margin-bottom: 0.5rem; display: flex; align-items: center;">
+            <span class="num-badge">5</span> רטוריקה ותרבות דיון
+          </h4>
+          <p style="margin: 0; color: var(--ink); line-height: 1.85;">
+            הקמת מרכז לדיבייט ורטוריקה שיכשיר צעירים ביכולת ביטוי, שכנוע ונאום בשפה קולחת ומכבדת בדגש על ניהול מחלוקות בחברה הישראלית מתוך כבוד הדדי ומניעת קיטוב, ברוח נאומיו של דוד לוי.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- פעילות המרכז ותחומי הפעילות -->
+      <div class="doc-card rv" style="max-width: 960px; margin: 0 auto; background: var(--surface); padding: clamp(2rem, 4vw, 3rem);">
+        <h3 style="color: var(--navy); margin-bottom: 1rem;">פעילות המרכז</h3>
+        <p style="font-size: 1.05rem; line-height: 1.85; color: var(--ink); margin-bottom: 1.75rem;">
+          פעילות המרכז תתבסס על יציאה אל האנשים והשכונות בפריפריה תוך שיתוף פעולה עם רשויות מקומיות, בתי ספר, ארגונים חברתיים, מוסדות ציוניים וממשלתיים.
+        </p>
+
+        <h4 style="color: var(--navy); margin-bottom: 1.25rem;">תחומי הפעילות:</h4>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">1</span>
+            <span style="font-size: 1rem; color: var(--ink);">הקמת מוזיאון אינטראקטיבי נודד שישמש בסיס לפעילות חינוכית בפריפריה.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">2</span>
+            <span style="font-size: 1rem; color: var(--ink);">הקמת ארכיון דיגיטלי ופיזי הכולל מסמכים, נאומים, כתבות ותצלומים.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">3</span>
+            <span style="font-size: 1rem; color: var(--ink);">קיום כנסים סמינרים, ימי עיון ואירועי הנצחה.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">4</span>
+            <span style="font-size: 1rem; color: var(--ink);">פיתוח תוכניות מנהיגות לצעירים מהפריפריה החברתית והגיאוגרפית.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">5</span>
+            <span style="font-size: 1rem; color: var(--ink);">פרסום והוצאה לאור של חומרים חינוכיים, תיעודיים, מחקריים וביוגרפיים על פועלו ומורשתו.</span>
+          </div>
+          <div style="display: flex; align-items: flex-start;">
+            <span class="num-badge">6</span>
+            <span style="font-size: 1rem; color: var(--ink);">מתן מלגות, פרסים ותמיכה בפעילי חברה ולמנהיגות מקומית.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =================================================================
+       קול קורא ומכרזים (EXACTLY AS SPECIFIED BY USER)
+       ================================================================= -->
+  <section class="section-bg-white" id="tenders-placeholder">
+    <div class="container">
+      <div class="tenders-official-card rv">
+        <h2>קול קורא ומכרזים</h2>
+        <p class="tenders-lead-text">
+          מרכז מורשת דוד לוי פועל בהתאם לעקרונות מנהל תקין, שוויון הזדמנויות ושקיפות ציבורית. לקראת הקמת המרכז וגיבוש תוכניותיו, יפורסמו בעמוד זה קולות קוראים ומכרזי רכש, תוכן ותכנון.
+        </p>
+        <div class="tender-item-highlight">
+          קול קורא לתפקיד מנכ"ל המרכז
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       הערות, רעיונות והצעות לפעילויות (דוד ראש - 100% VERBATIM)
+       ================================================================= -->
+  <section class="section-bg-alt" id="contact">
+    <div class="container">
+      <div class="org-header">
+        <h2 class="rv">הערות, רעיונות והצעות לפעילויות</h2>
+        <p class="rv rv-d1" style="margin: 0.5rem auto 0; color: var(--muted); font-size: 1.05rem;">
+          (על בסיס מורשתו של דוד לוי)
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- פרטי התקשרות רשמיים -->
+        <div class="contact-card rv">
+          <h3 style="color: var(--navy); margin-bottom: 1.5rem; font-size: 1.25rem;">נא להעביר לדוד ראש:</h3>
+          
+          <div class="contact-item">
+            <div class="contact-item-title">איש קשר</div>
+            <div class="contact-item-val">דוד ראש</div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-title">דואר אלקטרוני</div>
+            <div class="contact-item-val">
+              <a href="mailto:Rodavid48@gmail.com">Rodavid48@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-title">טלפון ליצירת קשר</div>
+            <div class="contact-item-val">
+              <a href="tel:0528991833" dir="ltr">052-8991833</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-title">פנייה ישירה</div>
+            <div class="contact-item-val">
+              <a href="https://wa.me/972528991833" target="_blank">משלוח הודעה בוואטסאפ &larr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- טופס משלוח הערות והצעות -->
+        <div class="contact-card rv rv-d1">
+          <h3 style="color: var(--navy); margin-bottom: 1.5rem; font-size: 1.25rem;">טופס משלוח הערות והצעות</h3>
+          
+          <form id="feedback-form" onsubmit="event.preventDefault(); document.getElementById('form-success').style.display='block'; this.reset();">
+            <div class="form-group">
+              <label class="form-label" for="f-topic">נושא הפנייה</label>
+              <select class="form-control" id="f-topic" required>
+                <option value="proposal" selected>הערות והצעות לפעילויות (על בסיס מורשתו)</option>
+                <option value="tender">בירור בנושא קולות קוראים ומכרזים</option>
+                <option value="general">פנייה כללית לוועדת ההקמה</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="f-name">שם מלא</label>
+              <input type="text" class="form-control" id="f-name" required placeholder="שם ושם משפחה">
+            </div>
+
+            <div class="form-row-grid">
+              <div class="form-group">
+                <label class="form-label" for="f-email">דואר אלקטרוני</label>
+                <input type="email" class="form-control" id="f-email" required placeholder="email@domain.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-phone">טלפון</label>
+                <input type="tel" class="form-control" id="f-phone" required placeholder="050-0000000">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="f-msg">תוכן הפנייה / ההצעה</label>
+              <textarea class="form-control" id="f-msg" rows="4" required placeholder="פירוט ההצעה או ההערה..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%;">שליחת הפנייה &larr;</button>
+            <div id="form-success" style="display:none; color: #166534; background: #dcfce7; padding: 0.8rem; border-radius: 6px; margin-top: 1rem; font-weight:600; text-align:center;">
+              פנייתכם התקבלה בהצלחה בוועדת ההקמה של מרכז מורשת דוד לוי.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-info">
+          <div class="footer-brand">
+            <img src="david-levy-center-logo-transparent.png" alt="לוגו מרכז מורשת דוד לוי">
+            <div class="footer-title">מרכז מורשת דוד לוי</div>
+          </div>
+          <p style="line-height:1.75; font-size:0.95rem; max-width:55ch; margin-bottom:1rem;">
+            מרכז מורשת דוד לוי נועד להנציח, לשמר ולהנחיל לדורות הבאים את פועלו הציבורי, האישי והחברתי של דוד לוי ז"ל.
+          </p>
+          <div style="font-family: var(--font-mono); font-size:0.82rem; color: rgba(255,255,255,0.6);">
+            30 יולי 2026 · טז' אב תשפ"ו
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4 style="color:#ffffff; font-size:1.1rem; margin-bottom:1.2rem;">ניווט במסמך היסוד</h4>
+          <ul class="footer-links-list">
+            <li><a href="#master-intro">מבוא</a></li>
+            <li><a href="#david-levy-man">דוד לוי – האיש</a></li>
+            <li><a href="#achievements">תפקידים והישגים</a></li>
+            <li><a href="#legacy">מורשת</a></li>
+            <li><a href="#vision">חזון</a></li>
+            <li><a href="#foundation-pillars">אבני יסוד</a></li>
+            <li><a href="#tenders-placeholder">קול קורא ומכרזים</a></li>
+            <li><a href="#contact">יצירת קשר והערות</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 מרכז מורשת דוד לוי (ע״ר). כל הזכויות שמורות.</span>
+        <span>מסמך יסוד רשמי</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-to-top" id="back-to-top" aria-label="חזרה לראש העמוד">&uarr;</a>
+
+  
+  <!-- =================================================================
+       REPOSITORY ARCHIVED SECTIONS (PRESERVED IN REPO, HIDDEN FROM PUBLIC)
+       ================================================================= -->
+  <div id="repository-archive-hidden" style="display:none !important;" aria-hidden="true">
+    <section class="timeline" id="timeline">
     <div class="container">
       <div class="timeline-header">
         <div class="label rv">ציר הזמן ותחנות החיים</div>
@@ -1322,11 +1425,7 @@
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       CATEGORY 2: המרכז (ארגוני, ממשלתי, חוק המרכז, דוחות ותכנית 2026)
-       ═══════════════════════════════════════════════════════════════ -->
-  <section class="org-section" id="the-center">
+    <section class="org-section" id="the-center">
     <div class="container">
       <div class="org-header">
         <div class="label rv">המרכז</div>
@@ -1427,26 +1526,65 @@
 
       <!-- Tab 7: דרושים ומכרזים -->
       <div id="tab-tenders" class="tab-content">
-        <div class="org-card-grid">
-          <div class="org-card">
-            <h4>מכרזים וקולות קוראים</h4>
-            <p>קול קורא להפעלת תוכניות מנהיגות בבתי ספר, מכרזי רכש ופיתוח תכנים מוזיאליים.</p>
+        <div class="tenders-hub-card" style="background:var(--surface); border:1.5px solid var(--accent); border-radius:12px; padding:2rem; margin-bottom:2rem; box-shadow:0 10px 30px rgba(29,78,216,0.08);">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; border-bottom:1px solid var(--rule); padding-bottom:1.2rem; margin-bottom:1.5rem;">
+            <div>
+              <span class="badge-tag badge-tag-blue">מוקד רשמי פתוח</span>
+              <h3 style="margin-top:0.4rem; color:var(--navy); font-size:1.6rem;">הגשת הצעות למכרזים וקולות קוראים</h3>
+            </div>
+            <a href="#contact" class="btn-primary" style="background:#2563EB;">הגשת מועמדות מהירה דרך האתר ←</a>
+          </div>
+          <p style="color:var(--muted); line-height:1.7; margin-bottom:1.5rem;">
+            מרכז מורשת דוד לוי פועל בהתאם לעקרונות מנהל תקין, שוויון הזדמנויות ושקיפות מלאה. לקראת הקמת המרכז, גיבוש התוכניות הפדגוגיות והפעלת המערך המוזיאלי, מפורסמים בזאת המכרזים והקולות הקוראים הבאים להגשת הצעות מטעם אנשי מקצוע, ספקים, מוסדות חינוך וחוקרים.
+          </p>
+          
+          <div class="org-card-grid">
+            <div class="org-card" style="border-top: 4px solid var(--accent);">
+              <span class="badge-tag badge-tag-amber">פתוח להגשה</span>
+              <h4 style="margin-top:0.5rem;">מכרז פומבי 01/2026: אפיון ותכנון תכנים מוזיאליים</h4>
+              <p>תכנון פרוגרמה אוצרותית, פיתוח עמדות מולטימדיה אינטראקטיביות והפקת מיצגי מורשת היסטוריים אודות פועלו של דוד לוי ז"ל.</p>
+              <div style="margin-top:1.2rem;">
+                <a href="#contact" class="btn-outline" style="width:100%; font-size:0.88rem; padding:0.6rem;">הגשת פנייה והורדת מסמכי מכרז</a>
+              </div>
+            </div>
+
+            <div class="org-card" style="border-top: 4px solid #16a34a;">
+              <span class="badge-tag badge-tag-amber">פתוח להגשה</span>
+              <h4 style="margin-top:0.5rem;">קול קורא 02/2026: תוכניות מנהיגות בבתי ספר</h4>
+              <p>הפעלת תוכניות פדגוגיות וסדנאות מנהיגות ורטוריקה בבתי ספר ובמוסדות נוער ברחבי הפריפריה החברתית והגיאוגרפית.</p>
+              <div style="margin-top:1.2rem;">
+                <a href="#contact" class="btn-outline" style="width:100%; font-size:0.88rem; padding:0.6rem;">הגשת פנייה והורדת מסמכי קול קורא</a>
+              </div>
+            </div>
+
+            <div class="org-card" style="border-top: 4px solid var(--gold);">
+              <span class="badge-tag badge-tag-blue">שלב מיון מוקדם</span>
+              <h4 style="margin-top:0.5rem;">קול קורא 03/2026: אדריכלות ועיצוב חללי מורשת</h4>
+              <p>הזמנה להציע הצעות קונספט ראשוניות לתכנון אדריכלי, חלוקת חללים וסביבת מבקרים מונגשת ומודרנית.</p>
+              <div style="margin-top:1.2rem;">
+                <a href="#contact" class="btn-outline" style="width:100%; font-size:0.88rem; padding:0.6rem;">הגשת פנייה לקבלת מפרט</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.8rem; background:var(--surface-2); border-radius:8px; padding:1.2rem 1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+            <div>
+              <strong>שאלות הבהרה והגשת מסמכים:</strong>
+              <div style="font-size:0.9rem; color:var(--muted); margin-top:0.2rem;">ניתן להגיש הצעות ומסמכים לוועדת המכרזים בדוא״ל: <a href="mailto:tenders@davidlevycenter.org.il" style="color:var(--accent); font-weight:600;">tenders@davidlevycenter.org.il</a> או באמצעות טופס יצירת הקשר באתר.</div>
+            </div>
+            <a href="#contact" class="btn-primary" style="padding:0.6rem 1.4rem; font-size:0.9rem;">פנייה לוועדת המכרזים</a>
           </div>
         </div>
       </div>
 
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       CATEGORY 3: לבקר במרכז (מידע למבקר, כרטיסים, קבוצות, קהלים)
-       ═══════════════════════════════════════════════════════════════ -->
-  <section class="visit-section" id="visit">
+    <section class="visit-section" id="visit">
     <div class="container">
       <div class="org-header">
-        <div class="label rv">לבקר במרכז</div>
-        <h2 class="rv rv-d1">תכנון ביקור, <em>סיורים ומשלחות</em></h2>
-        <p class="rv rv-d2" style="margin: 0 auto; margin-top: 1rem; color: var(--muted);">כל מה שמבקר צריך לפני ההגעה, בזמן התכנון ולפי סוג הקהל.</p>
+        <div class="label rv">לבקר במרכז — תכנון עתידי</div>
+        <h2 class="rv rv-d1">תכנון ביקור, <em>סיורים ומשלחות</em> <span class="room-draft-tag">בהקמה</span></h2>
+        <p class="rv rv-d2" style="margin: 0 auto; margin-top: 1rem; color: var(--muted);">מידע זה מהווה מתווה תכנון ראשוני. מועדי הפתיחה והביקורים יפורסמו בהמשך.</p>
       </div>
 
       <div class="visit-grid">
@@ -1454,34 +1592,37 @@
           <div class="visit-row">
             <div class="visit-icon">•</div>
             <div class="visit-detail">
-              <h5>שעות פעילות</h5>
-              <p>ימים א'–ה': 09:00 – 17:00 | ימי שישי וערבי חג: 09:00 – 13:00</p>
+              <h5>שעות פעילות ומועדי כניסה</h5>
+              <p><span class="badge-tag badge-tag-amber">טרם פורסם</span> שעות הפעילות, ימי הסיורים ומועדי הכניסה למרכז ייקבעו ויוכרזו לקראת פתיחת המרכז לציבור הרחב. המרכז נמצא כעת בשלבי הקמה ובינוי.</p>
             </div>
           </div>
           <div class="visit-row">
             <div class="visit-icon">•</div>
             <div class="visit-detail">
-              <h5>מיקום והגעה</h5>
-              <p>מתחם המורשת, בית שאן / ירושלים (חניה בשפע ונגישות מלאה בתחבורה ציבורית)</p>
+              <h5>מיקום ומתחם המרכז</h5>
+              <p><span class="badge-tag badge-tag-blue">בתכנון</span> מתחם המורשת מתוכנן בבית שאן / ירושלים. כתובת מדויקת והסדרי הגעה יפורסמו עם השלמת שלבי התכנון.</p>
             </div>
           </div>
           <div class="visit-row">
             <div class="visit-icon">•</div>
             <div class="visit-detail">
-              <h5>נגישות מלאה</h5>
-              <p>התאמות נגישות מלאות לכיסאות גלגלים, מערכות עזר לשמיעה ועזרי ראייה.</p>
+              <h5>הנגשה מקיפה</h5>
+              <p><span class="badge-tag badge-tag-blue">עקרון יסוד</span> המרכז מתוכנן מראש עם נגישות פיזית, חושית וקוגניטיבית מלאה על פי התקנים המחמירים ביותר.</p>
             </div>
           </div>
           <div style="margin-top:1.5rem;" id="visit-tickets">
-            <a href="#donate" class="btn-primary" style="width: 100%;">רכישת כרטיסים אונליין</a>
+            <div style="background:var(--surface-2); border:1.5px dashed var(--rule-strong); border-radius:8px; padding:1.25rem; text-align:center;">
+              <div style="font-weight:700; color:var(--navy); margin-bottom:0.3rem;">🎟️ מחירון וכרטיסים (טרם נקבעו)</div>
+              <p style="font-size:0.88rem; color:var(--muted); margin:0;">דמי הכניסה והסדרי כרטיסים מוזלים לקבוצות, לתלמידים, לחיילים ולאזרחים ותיקים יפורסמו לקראת מועד ההשקה הרשמית.</p>
+            </div>
           </div>
         </div>
 
         <div class="visit-info-box rv rv-d1" id="visit-groups">
-          <h3>קבוצות, משלחות ואירועים</h3>
-          <p style="color:var(--muted); font-size:1rem; margin-bottom: 1.5rem;">תיאום סיורים מודרכים לקבוצות מאורגנות, משלחות דיפלומטיות, כוחות הביטחון וימי עיון מוסדיים.</p>
+          <h3>קבוצות, משלחות ואירועים <span class="room-draft-tag">רישום מוקדם</span></h3>
+          <p style="color:var(--muted); font-size:1rem; margin-bottom: 1.5rem;">ריכוז פניות מקדמיות לקראת תיאום סיורים מודרכים לקבוצות מאורגנות, משלחות דיפלומטיות, כוחות הביטחון וימי עיון מוסדיים.</p>
           
-          <div class="label">מבקרים לפי קהל יעד:</div>
+          <div class="label">קהלי יעד מתוכננים:</div>
           <div class="audience-grid" id="visit-audiences">
             <div class="audience-chip">מערכת החינוך</div>
             <div class="audience-chip">כוחות הביטחון</div>
@@ -1494,11 +1635,7 @@
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       CATEGORY 4: חינוך (ערכות חינוכיות, אסופת זיכרון, כרזות, ימי עיון)
-       ═══════════════════════════════════════════════════════════════ -->
-  <section class="edu-section" id="education">
+    <section class="edu-section" id="education">
     <div class="container">
       <div class="org-header">
         <div class="label rv">חינוך</div>
@@ -1530,11 +1667,7 @@
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       CATEGORY 5: אירועים ותערוכות (לוח מתעדכן שוטף)
-       ═══════════════════════════════════════════════════════════════ -->
-  <section class="events-section" id="events">
+    <section class="events-section" id="events">
     <div class="container">
       <div class="org-header">
         <div class="label rv">אירועים ותערוכות</div>
@@ -1563,48 +1696,40 @@
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       CONDITIONAL MODULE: אודות המוזיאון (סעיף מותנה במידה וקיים מוזיאון פיזי)
-       ═══════════════════════════════════════════════════════════════ -->
-  <section class="museum-section" id="museum-conditional">
+    <section class="museum-section" id="museum-conditional">
     <div class="container">
       <div class="museum-badge-conditional">
-        סעיף מותנה — מודול המוזיאון הפיזי (אודות המוזיאון)
+        פרוגרמה אדריכלית — תכנון רעיוני בהקמה (טיוטה)
       </div>
-      <h2>אודות המוזיאון — הסיפור וחדרי התצוגה</h2>
-      <p style="margin-top:0.5rem; max-width:700px;">מסלול תצוגה חווייתי ואינטראקטיבי המוליך את המבקר בין תחנות חייו של דוד לוי והמהפכות החברתיות שהוביל.</p>
+      <h2>אודות המוזיאון — חזון החללים וחדרי התצוגה <span class="room-draft-tag">קונספט ראשוני</span></h2>
+      <p style="margin-top:0.5rem; max-width:700px; color:var(--muted);">מבנה המוזיאון, חלוקת החללים והתצוגות שלהלן מהווים הצעה תכנונית רעיונית בלבד. הפרוגרמה המפורטת תעוצב ותאושר בהמשך במסגרת מכרזי התוכן והאדריכלות של המרכז.</p>
 
       <div class="museum-rooms">
         <div class="museum-room-card rv">
-          <h4>חדר 1: מערי הפיתוח לממשלה</h4>
+          <h4>חדר 1: מערי הפיתוח לממשלה <span class="room-draft-tag">קונספט מוצע</span></h4>
           <p>תצוגת בית שאן, שנות העלייה, עבודת כפיים בבנייה וצמיחת המנהיגות השורשית.</p>
         </div>
         <div class="museum-room-card rv rv-d1">
-          <h4>חדר 2: המהפכה החברתית</h4>
+          <h4>חדר 2: המהפכה החברתית <span class="room-draft-tag">קונספט מוצע</span></h4>
           <p>תצוגה אינטראקטיבית של פרויקט שיקום השכונות, מפות התיישבות ודיור ציבורי.</p>
         </div>
         <div class="museum-room-card rv rv-d2">
-          <h4>חדר 3: זירה דיפלומטית</h4>
+          <h4>חדר 3: זירה דיפלומטית <span class="room-draft-tag">קונספט מוצע</span></h4>
           <p>שחזור לשכת שר החוץ, הסכמים בינלאומיים, ועידת מדריד וביטול החלטת האו״ם.</p>
         </div>
         <div class="museum-room-card rv rv-d3">
-          <h4>חדר 4: מרכז הרטוריקה</h4>
+          <h4>חדר 4: מרכז הרטוריקה <span class="room-draft-tag">קונספט מוצע</span></h4>
           <p>עמדות שמע וניתוח נאומים היסטוריים בכנסת ישראל ותרבות הדיון הממלכתית.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════════════════════════════════
-       CATEGORY 6: תמיכה וקהילה (חוג ידידים, תרומות, ניוזלטר)
-       ═══════════════════════════════════════════════════════════════ -->
-  <section class="community-section" id="community">
+    <section class="community-section" id="community">
     <div class="container">
       <div class="org-header">
-        <div class="label rv">תמיכה וקהילה</div>
-        <h2 class="rv rv-d1">חוג הידידים <em>והתמיכה במורשת</em></h2>
-        <p class="rv rv-d2" style="margin: 0 auto; margin-top: 1rem; color: var(--muted);">הצטרפו לקהילת התומכים והידידים הפועלים להנחלת מנהיגות וצדק חברתי.</p>
+        <div class="label rv">תמיכה וקהילה — בהקמה</div>
+        <h2 class="rv rv-d1">חוג הידידים <em>והתמיכה במורשת</em> <span class="room-draft-tag">טיוטה</span></h2>
+        <p class="rv rv-d2" style="margin: 0 auto; margin-top: 1rem; color: var(--muted);">הצטרפו לקהילת התומכים והידידים הפועלים להנחלת מנהיגות וצדק חברתי. מסלולי התמיכה יופעלו עם השלמת הליכי ההקמה.</p>
       </div>
 
       <blockquote class="rv rv-d3">
@@ -1613,22 +1738,25 @@
 
       <div class="donation-tiers" id="donate">
         <div class="tier-card rv">
-          <div class="tier-name">ידיד</div>
-          <div class="tier-amount">₪180</div>
-          <div class="tier-desc">תמיכה שנתית בפעילות המרכז</div>
-          <a href="#" class="btn-outline" style="width:100%; margin-top:auto;">תרום עכשיו</a>
+          <span class="badge-tag badge-tag-amber" style="align-self:flex-start;">מסלול עתידי בהקמה</span>
+          <div class="tier-name" style="margin-top:0.5rem;">חוג ידידים</div>
+          <div class="tier-amount" style="font-size:1.35rem; color:var(--navy);">תמיכה שנתית</div>
+          <div class="tier-desc">הצטרפות לקהילת התומכים בפעילות החינוכית של המרכז (הגדרת מסלולי ההצטרפות תפורסם בהמשך)</div>
+          <a href="#contact" class="btn-outline" style="width:100%; margin-top:auto;">לרישום מוקדם והתעניינות</a>
         </div>
         <div class="tier-card rv rv-d1" style="border-color: var(--accent); box-shadow: 0 10px 30px rgba(29,78,216,0.1);">
-          <div class="tier-name">תומך</div>
-          <div class="tier-amount">₪500</div>
-          <div class="tier-desc">מלגת סיוע לסטודנט מהפריפריה</div>
-          <a href="#" class="btn-primary" style="width:100%; margin-top:auto;">תרום עכשיו</a>
+          <span class="badge-tag badge-tag-blue" style="align-self:flex-start;">בתהליך גיבוש</span>
+          <div class="tier-name" style="margin-top:0.5rem;">קרן מלגות ומחקר</div>
+          <div class="tier-amount" style="font-size:1.35rem; color:var(--accent);">עידוד צעירי הפריפריה</div>
+          <div class="tier-desc">מלגות מחקר וסיוע לסטודנטים ולחוקרים מערי הפיתוח והפריפריה החברתית</div>
+          <a href="#contact" class="btn-primary" style="width:100%; margin-top:auto;">לפרטים והבעת עניין</a>
         </div>
         <div class="tier-card rv rv-d2">
-          <div class="tier-name">שותף</div>
-          <div class="tier-amount">₪1,800</div>
-          <div class="tier-desc">הקדשת יום עיון חינוכי לנוער</div>
-          <a href="#" class="btn-outline" style="width:100%; margin-top:auto;">תרום עכשיו</a>
+          <span class="badge-tag badge-tag-amber" style="align-self:flex-start;">מסלול עתידי בהקמה</span>
+          <div class="tier-name" style="margin-top:0.5rem;">שותפות במורשת</div>
+          <div class="tier-amount" style="font-size:1.35rem; color:var(--navy);">מיזמי הנצחה וחינוך</div>
+          <div class="tier-desc">הקדשת ימי עיון חינוכיים לנוער, סדנאות מנהיגות ומיזמי תיעוד היסטורי</div>
+          <a href="#contact" class="btn-outline" style="width:100%; margin-top:auto;">לפנייה לקרן המורשת</a>
         </div>
       </div>
 
@@ -1643,163 +1771,34 @@
 
     </div>
   </section>
+  </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       CATEGORY 7: יצירת קשר (טופס + וואטסאפ)
-       ═══════════════════════════════════════════════════════════════ -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="org-header">
-        <div class="label rv">יצירת קשר</div>
-        <h2 class="rv rv-d1">נשמח <em>לשמוע מכם</em></h2>
-        <p class="rv rv-d2" style="margin: 0 auto; margin-top: 1rem; color: var(--muted);">צוות המרכז עומד לרשותכם בכל שאלה, תיאום סיור, פנייה תקשורתית או תמיכה.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="visit-info-box rv">
-          <h3>דרכי התקשרות מהירות</h3>
-          <div class="visit-row" style="margin-top: 1.5rem;">
-            <div class="visit-icon">•</div>
-            <div class="visit-detail">
-              <h5>וואטסאפ ישיר</h5>
-              <p><a href="https://wa.me/972528991833" target="_blank" style="color:var(--accent); font-weight:700; text-decoration:none;">052-8991833 — לחצו לשיחה בוואטסאפ</a></p>
-            </div>
-          </div>
-          <div class="visit-row">
-            <div class="visit-icon">•</div>
-            <div class="visit-detail">
-              <h5>דואר אלקטרוני</h5>
-              <p><a href="mailto:info@davidlevycenter.org.il" style="color:var(--accent); text-decoration:none;">info@davidlevycenter.org.il</a></p>
-              <p><a href="mailto:Rodavid48@gmail.com" style="color:var(--accent); text-decoration:none;">Rodavid48@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="visit-row">
-            <div class="visit-icon">•</div>
-            <div class="visit-detail">
-              <h5>כתובת המרכז</h5>
-              <p>בית שאן / ירושלים</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-card rv rv-d1">
-          <h3>טופס פנייה ישירה</h3>
-          <form id="contact-form" onsubmit="event.preventDefault(); document.getElementById('form-success').style.display='block'; this.reset();">
-            <div class="fg">
-              <input type="text" class="fg-input" id="f-name" placeholder=" " required>
-              <label class="fg-label" for="f-name">שם מלא</label>
-            </div>
-            <div class="fg">
-              <input type="email" class="fg-input" id="f-email" placeholder=" " required>
-              <label class="fg-label" for="f-email">דואר אלקטרוני</label>
-            </div>
-            <div class="fg">
-              <input type="tel" class="fg-input" id="f-phone" placeholder=" " required>
-              <label class="fg-label" for="f-phone">טלפון</label>
-            </div>
-            <div class="fg">
-              <textarea class="fg-textarea" id="f-msg" placeholder=" " rows="4" required></textarea>
-              <label class="fg-label" for="f-msg">תוכן הפנייה</label>
-            </div>
-            <button type="submit" class="btn-primary">שליחת פנייה ←</button>
-            <div id="form-success" style="display:none; color: green; margin-top: 1rem; font-weight:600; text-align:center;">✓ פנייתכם התקבלה בהצלחה! צוות המרכז יחזור אליכם בהקדם.</div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand" style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;">
-            <img src="logo2.jpg" alt="לוגו מרכז דוד לוי" style="width:48px; height:48px; object-fit:cover; border-radius:8px; border:1px solid rgba(255,255,255,0.2);">
-            <span style="font-family:var(--font-display); font-size:1.3rem; font-weight:700; color:#fff;">מרכז מורשת<br><span style="color:var(--gold);">דוד לוי</span></span>
-          </div>
-          <p style="line-height:1.7;">עמותה להנצחה, שימור והנחלת מורשתו הציבורית, החברתית והממלכתית של דוד לוי ז״ל, וקידום שוויון הזדמנויות בפריפריה הישראלית.</p>
-        </div>
-        
-        <div class="footer-links">
-          <h3>ניווט מהיר</h3>
-          <ul>
-            <li><a href="#david-levy">1. דוד לוי - האיש והמורשת</a></li>
-            <li><a href="#the-center">2. המרכז ומסמכי יסוד</a></li>
-            <li><a href="#visit">3. לבקר במרכז וכרטיסים</a></li>
-            <li><a href="#education">4. חינוך ומשאבים</a></li>
-            <li><a href="#events">אירועים ותערוכות</a></li>
-            <li><a href="#community">6. קהילה וחוג ידידים</a></li>
-            <li><a href="#contact">יצירת קשר</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>הרשמה לעדכונים</h3>
-          <p style="font-size:0.9rem; margin-bottom:1rem;">קבלו עדכונים על תוכניות מנהיגות, אירועי הנצחה ופעילות המוזיאון.</p>
-          <form style="display:flex; gap:0.5rem;" onsubmit="event.preventDefault(); alert('תודה שנרשמתם!'); this.reset();">
-            <input type="email" class="fg-input" placeholder="כתובת אימייל" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.2); color:#fff; padding:0.8rem;" required>
-            <button type="submit" class="btn-primary" style="padding:0.8rem 1.2rem;">הרשמה</button>
-          </form>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 מרכז מורשת דוד לוי (ע״ר). כל הזכויות שמורות.</span>
-        <span>נבנה כהוקרה למנהיגותו ולמורשתו הממלכתית</span>
-      </div>
-    </div>
-  </footer>
-
-  <a href="#top" class="back-to-top" id="back-to-top" aria-label="חזור למעלה">↑</a>
 
   <script>
-    /* Scroll Reveal */
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.rv').forEach(el => io.observe(el));
-
-    /* Counters */
-    const cio = new IntersectionObserver((entries) => {
+    // Scroll reveal animation
+    const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        const el = e.target, target = +el.dataset.target, dur = 1500, t0 = performance.now();
-        (function tick(now) {
-          const p = Math.min((now - t0) / dur, 1);
-          el.textContent = Math.round((1 - Math.pow(1 - p, 4)) * target);
-          if (p < 1) requestAnimationFrame(tick);
-        })(t0);
-        cio.unobserve(el);
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          obs.unobserve(e.target);
+        }
       });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('[data-target]').forEach(el => cio.observe(el));
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.rv').forEach(el => obs.observe(el));
 
-    /* Nav scroll effect & Back to top button */
+    // Nav scroll state & Back to top
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('nav');
-      if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+      if (nav) nav.classList.toggle('scrolled', window.scrollY > 30);
 
       const btt = document.getElementById('back-to-top');
       if (btt) {
-        if (window.scrollY > 500) btt.classList.add('visible');
+        if (window.scrollY > 400) btt.classList.add('visible');
         else btt.classList.remove('visible');
       }
     });
 
-    /* Tab switcher for Category 2 */
-    function switchTab(tabId, btn) {
-      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      const target = document.getElementById(tabId);
-      if (target) target.classList.add('active');
-      if (btn) btn.classList.add('active');
-    }
-    function openTab(tabId) {
-      const btn = document.querySelector(`.tab-btn[onclick*="${tabId}"]`);
-      switchTab(tabId, btn);
-    }
-
-    /* Mobile Menu Logic */
+    // Mobile nav drawer
     const mobileBtn = document.getElementById('mobile-menu-open');
     const mobileCloseBtn = document.getElementById('mobile-menu-close');
     const mobilePanel = document.getElementById('mobile-nav-panel');
@@ -1808,42 +1807,25 @@
     function openMobileMenu() {
       mobilePanel.classList.add('open');
       mobileBackdrop.classList.add('open');
-      document.body.classList.add('menu-open');
+      document.body.style.overflow = 'hidden';
       mobileBtn.setAttribute('aria-expanded', 'true');
     }
     
     function closeMobileMenu() {
       mobilePanel.classList.remove('open');
       mobileBackdrop.classList.remove('open');
-      document.body.classList.remove('menu-open');
+      document.body.style.overflow = '';
       mobileBtn.setAttribute('aria-expanded', 'false');
     }
 
-    mobileBtn.addEventListener('click', openMobileMenu);
-    mobileCloseBtn.addEventListener('click', closeMobileMenu);
-    mobileBackdrop.addEventListener('click', closeMobileMenu);
+    if (mobileBtn) mobileBtn.addEventListener('click', openMobileMenu);
+    if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
+    if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMobileMenu);
 
-    /* Mobile Accordion */
-    document.querySelectorAll('.mobile-menu-link[data-toggle]').forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const parentLi = this.parentElement;
-        parentLi.classList.toggle('active');
-      });
-    });
-
-    /* Close menu on sub-link click */
-    document.querySelectorAll('.mobile-sub-menu a, .mobile-menu-link:not([data-toggle])').forEach(link => {
+    document.querySelectorAll('.mobile-menu-link').forEach(link => {
       link.addEventListener('click', closeMobileMenu);
     });
-
-    /* Hero Parallax */
-    window.addEventListener('scroll', () => {
-      const heroImg = document.getElementById('hero-img-wrapper');
-      if (heroImg && window.scrollY < window.innerHeight) {
-        heroImg.style.transform = `translateY(${window.scrollY * 0.05}px)`;
-      }
-    });
   </script>
+
 </body>
 </html>
