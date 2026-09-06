@@ -2,3 +2,5 @@
 *.backup.html
 diff_check.txt
 exports/
+audit_*.txt
+*MASTER*.txt
