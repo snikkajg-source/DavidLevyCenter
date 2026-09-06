@@ -36,7 +36,7 @@
       --font-mono:    'DM Mono', monospace;
 
       --ease:         cubic-bezier(0.16, 1, 0.3, 1);
-      --max-w:        1180px;
+      --max-w:        1240px;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -62,7 +62,7 @@
       width: 100%;
       max-width: var(--max-w);
       margin-inline: auto;
-      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+      padding-inline: clamp(1.25rem, 3vw, 2.5rem);
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -72,9 +72,9 @@
       line-height: 1.25;
     }
     h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); }
-    h2 { font-size: clamp(1.75rem, 3.2vw, 2.35rem); }
-    h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); }
-    h4 { font-size: 1.18rem; }
+    h2 { font-size: clamp(1.6rem, 2.8vw, 2.25rem); line-height: 1.3; }
+    h3 { font-size: clamp(1.25rem, 2vw, 1.65rem); }
+    h4 { font-size: 1.15rem; }
 
     p { margin-bottom: 1.1rem; }
     p:last-child { margin-bottom: 0; }
@@ -137,7 +137,7 @@
     }
 
     /* =================================================================
-       CLEAN SINGLE HEADER (NO DUPLICATIONS)
+       CLEAN SINGLE HEADER (FITS IN ONE CLEAN LINE)
        ================================================================= */
     .main-nav {
       position: fixed;
@@ -161,30 +161,30 @@
       width: 100%;
       max-width: var(--max-w);
       margin-inline: auto;
-      padding-inline: clamp(1.25rem, 4vw, 2.5rem);
+      padding-inline: clamp(1.25rem, 3vw, 2.5rem);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
+      gap: clamp(0.75rem, 2vw, 2rem);
     }
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 0.9rem;
+      gap: 0.85rem;
       text-decoration: none;
       color: var(--navy);
       flex-shrink: 0;
     }
     .nav-logo img {
-      height: 52px;
+      height: 50px;
       width: auto;
-      max-width: 140px;
+      max-width: 135px;
       object-fit: contain;
       display: block;
       transition: height 0.2s ease;
     }
     .main-nav.scrolled .nav-logo img {
-      height: 46px;
+      height: 44px;
     }
     .logo-text-wrap {
       display: flex;
@@ -197,32 +197,37 @@
       font-weight: 700;
       color: var(--navy);
       letter-spacing: -0.01em;
+      white-space: nowrap;
     }
     .nav-categories {
       display: flex;
       list-style: none;
-      gap: 1.35rem;
+      gap: clamp(0.6rem, 1.3vw, 1.35rem);
       align-items: center;
+      white-space: nowrap;
     }
     .nav-item a {
       text-decoration: none;
       color: var(--ink);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 500;
-      padding: 0.35rem 0.2rem;
+      padding: 0.35rem 0.15rem;
       transition: color 0.2s;
+      white-space: nowrap;
     }
     .nav-item a:hover { color: var(--accent); }
 
     .nav-end-actions {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: clamp(0.6rem, 1.2vw, 1.1rem);
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .nav-contact-link {
       text-decoration: none;
       color: var(--ink);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 500;
       transition: color 0.2s;
       white-space: nowrap;
@@ -277,12 +282,11 @@
     .mobile-nav-footer .btn-header-cta { text-align: center; }
 
     /* =================================================================
-       HERO SECTION (MINIMALIST & FINE)
-       Picture, large transparent logo (with embedded name), badge, single tender CTA
+       HERO SECTION (CO-EQUAL HEROES: 450PX LOGO ALONGSIDE 450PX PICTURE)
        ================================================================= */
     .hero {
       padding-top: 7.5rem;
-      padding-bottom: 4.5rem;
+      padding-bottom: 4.8rem;
       background: var(--bg);
       border-bottom: 1px solid var(--rule);
       position: relative;
@@ -293,14 +297,17 @@
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: 3.5rem;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 4.5rem);
       align-items: center;
+      justify-items: center;
     }
     .hero-content-side {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      width: 100%;
+      max-width: 450px;
     }
 
     .badge-status {
@@ -315,7 +322,7 @@
       font-size: 0.82rem;
       font-family: var(--font-mono);
       font-weight: 600;
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
       letter-spacing: 0.02em;
     }
     .badge-status::before {
@@ -328,40 +335,44 @@
     }
 
     .hero-logo-wrap {
-      margin-bottom: 2.2rem;
-      display: block;
+      margin-bottom: 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
     }
     .hero-logo-img {
-      height: 220px;
-      width: auto;
+      width: 450px;
       max-width: 100%;
+      height: auto;
       object-fit: contain;
       display: block;
     }
 
     .hero-cta-wrap {
-      margin-top: 0.25rem;
+      margin-top: 0.5rem;
+      width: 100%;
     }
 
     .hero-portrait-side {
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 100%;
     }
     .hero-frame {
-      background: transparent;
-      padding: 0;
-      max-width: 440px;
+      max-width: 450px;
       width: 100%;
       position: relative;
     }
     .hero-frame img {
       width: 100%;
       height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       display: block;
       border-radius: 8px;
       border: 1px solid var(--rule-strong);
-      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.1);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
     }
 
     /* =================================================================
@@ -420,7 +431,6 @@
 
     /* =================================================================
        QUOTE HERO ROW ("לסדוק את תקרת הזכוכית")
-       Highlighted row under Vision point 6
        ================================================================= */
     .quote-hero-banner {
       background: linear-gradient(135deg, var(--navy) 0%, #172A45 100%);
@@ -653,7 +663,7 @@
     /* =================================================================
        RESPONSIVE REFINEMENTS
        ================================================================= */
-    @media (max-width: 1060px) {
+    @media (max-width: 1120px) {
       .nav-categories { display: none; }
       .nav-contact-link { display: none; }
       .mobile-menu-btn { display: inline-flex; }
@@ -662,20 +672,31 @@
     @media (max-width: 960px) {
       .hero-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 2.75rem;
         text-align: center;
       }
       .hero-content-side {
         align-items: center;
+        max-width: 450px;
+        margin-inline: auto;
       }
       .badge-status {
         margin-inline: auto;
       }
       .hero-logo-wrap {
+        justify-content: center;
         margin-inline: auto;
       }
+      .hero-logo-img {
+        width: min(450px, 90vw);
+      }
       .hero-frame {
+        max-width: min(450px, 90vw);
         margin-inline: auto;
+      }
+      .hero-cta-wrap {
+        display: flex;
+        justify-content: center;
       }
       .contact-grid {
         grid-template-columns: 1fr;
@@ -722,9 +743,6 @@
     }
 
     @media (max-width: 540px) {
-      .hero-logo-img {
-        height: 160px;
-      }
       .hero-logo-wrap {
         margin-bottom: 1.5rem;
       }
@@ -733,9 +751,6 @@
       }
       .hero-cta-wrap {
         width: 100%;
-      }
-      .hero-frame {
-        max-width: 100%;
       }
       .footer-links-list {
         columns: 1;
@@ -756,7 +771,7 @@
 </head>
 <body>
 
-  <!-- MAIN NAVIGATION (CLEAN SINGLE HEADER) -->
+  <!-- MAIN NAVIGATION (CLEAN SINGLE HEADER FITTING IN ONE LINE) -->
   <header class="main-nav" id="nav">
     <div class="nav-inner-container">
       <a class="nav-logo" href="#top" aria-label="מרכז מורשת דוד לוי - עמוד הבית">
@@ -770,9 +785,9 @@
         <li class="nav-item"><a href="#master-intro">מבוא</a></li>
         <li class="nav-item"><a href="#david-levy-man">דוד לוי – האיש</a></li>
         <li class="nav-item"><a href="#achievements">תפקידים והישגים</a></li>
-        <li class="nav-item"><a href="#legacy">מורשתו של דוד לוי</a></li>
-        <li class="nav-item"><a href="#vision">חזון המרכז</a></li>
-        <li class="nav-item"><a href="#foundation-pillars">אבני יסוד ופעילות</a></li>
+        <li class="nav-item"><a href="#legacy">מורשת</a></li>
+        <li class="nav-item"><a href="#vision">חזון</a></li>
+        <li class="nav-item"><a href="#foundation-pillars">אבני יסוד</a></li>
       </ul>
 
       <div class="nav-end-actions">
@@ -813,7 +828,7 @@
     </div>
   </div>
 
-  <!-- HERO SECTION (MINIMALIST & FINE) -->
+  <!-- HERO SECTION (CO-EQUAL HEROES: 450PX LOGO ALONGSIDE 450PX PICTURE) -->
   <header class="hero" id="top">
     <div class="hero-stripe"></div>
     <div class="container">
@@ -1326,9 +1341,9 @@
             <li><a href="#master-intro">מבוא</a></li>
             <li><a href="#david-levy-man">דוד לוי – האיש</a></li>
             <li><a href="#achievements">תפקידים והישגים</a></li>
-            <li><a href="#legacy">מורשתו של דוד לוי</a></li>
-            <li><a href="#vision">חזון המרכז</a></li>
-            <li><a href="#foundation-pillars">אבני יסוד ופעילות</a></li>
+            <li><a href="#legacy">מורשת</a></li>
+            <li><a href="#vision">חזון</a></li>
+            <li><a href="#foundation-pillars">אבני יסוד</a></li>
             <li><a href="#tenders-placeholder">קול קורא ומכרזים</a></li>
             <li><a href="#contact">יצירת קשר והערות</a></li>
           </ul>
