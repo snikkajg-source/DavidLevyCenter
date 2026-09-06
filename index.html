@@ -309,25 +309,26 @@
     .badge-status {
       display: inline-flex;
       align-items: center;
-      gap: 0.45rem;
-      background: rgba(154, 107, 31, 0.12);
-      color: var(--gold);
-      border: 1px solid rgba(154, 107, 31, 0.25);
-      border-radius: 4px;
-      padding: 0.35rem 0.8rem;
-      font-size: 0.82rem;
-      font-family: var(--font-mono);
-      font-weight: 600;
-      margin-bottom: 1.75rem;
-      letter-spacing: 0.02em;
+      gap: 0.75rem;
+      background: #FFFFFF;
+      color: var(--navy);
+      border: 2px solid rgba(154, 107, 31, 0.5);
+      border-radius: 8px;
+      padding: 0.65rem 1.4rem;
+      font-size: 1.05rem;
+      font-family: var(--font-body);
+      font-weight: 700;
+      margin-bottom: 2rem;
+      letter-spacing: 0.01em;
+      box-shadow: 0 4px 16px rgba(154, 107, 31, 0.14);
     }
-    .badge-status::before {
-      content: '';
+    .badge-status-dot {
       display: inline-block;
-      width: 7px;
-      height: 7px;
+      width: 10px;
+      height: 10px;
       border-radius: 50%;
       background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(154, 107, 31, 0.25);
     }
 
     .hero-logo-wrap {
@@ -433,38 +434,20 @@
     }
 
     /* =================================================================
-       QUOTE HERO ROW ("לסדוק את תקרת הזכוכית")
+       EMBEDDED QUOTE HIGHLIGHT IN POINT 6 ("לסדוק את תקרת הזכוכית")
        ================================================================= */
-    .quote-hero-banner {
-      background: linear-gradient(135deg, var(--navy) 0%, #172A45 100%);
-      color: #ffffff;
-      border-radius: 8px;
-      border: 1px solid rgba(154, 107, 31, 0.35);
-      padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 3.5vw, 2.5rem);
-      margin-top: 2.5rem;
-      box-shadow: 0 10px 30px rgba(10, 25, 47, 0.18);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .quote-hero-banner::before {
-      content: '“';
-      position: absolute;
-      top: -15px;
-      right: 25px;
+    .vision-embedded-quote {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--surface-2);
+      border: 1.5px solid rgba(154, 107, 31, 0.4);
+      border-radius: 6px;
+      padding: 0.6rem 1.4rem;
       font-family: var(--font-display);
-      font-size: 8rem;
-      color: rgba(255, 255, 255, 0.06);
-      line-height: 1;
-      pointer-events: none;
-    }
-    .quote-hero-text {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-size: 1.35rem;
       font-weight: 700;
-      color: #ffffff;
-      line-height: 1.3;
-      letter-spacing: -0.01em;
+      color: var(--navy);
+      box-shadow: 0 3px 12px rgba(154, 107, 31, 0.1);
     }
 
     /* =================================================================
@@ -842,7 +825,7 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content-side">
-          <div class="badge-status rv">אתר זמני בהקמה</div>
+          <div class="badge-status rv"><span class="badge-status-dot"></span>אתר זמני בהקמה</div>
           <h1 class="hero-logo-wrap rv rv-d1" style="font-size:0; line-height:0; margin:0 0 2rem 0;">
             <img src="david-levy-center-logo-transparent.png" class="hero-logo-img" alt="מרכז מורשת דוד לוי">
           </h1>
@@ -1109,13 +1092,13 @@
           </div>
           <div style="display: flex; align-items: flex-start;">
             <span class="num-badge">6</span>
-            <span style="font-size: 1.08rem; line-height: 1.8; color: var(--navy); font-weight: 600;">מרכז מורשת דוד לוי יטפח דור חדש של מנהיגים הרואים בשירות הציבורי שליחות, ובכבוד האדם ערך עליון תוך מתן דגש על קידום צעירי הפריפריה החברתית והגיאוגרפית.</span>
+            <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+              <span style="font-size: 1.08rem; line-height: 1.8; color: var(--navy); font-weight: 600;">מרכז מורשת דוד לוי יטפח דור חדש של מנהיגים הרואים בשירות הציבורי שליחות, ובכבוד האדם ערך עליון תוך מתן דגש על קידום צעירי הפריפריה החברתית והגיאוגרפית.</span>
+              <div class="vision-embedded-quote rv rv-d1">
+                ״לסדוק את תקרת הזכוכית״
+              </div>
+            </div>
           </div>
-        </div>
-
-        <!-- HIGHLIGHTED HERO ROW UNDER POINT 6 (AS REQUESTED) -->
-        <div class="quote-hero-banner rv rv-d1">
-          <div class="quote-hero-text">״לסדוק את תקרת הזכוכית״</div>
         </div>
       </div>
     </div>
