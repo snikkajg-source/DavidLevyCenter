@@ -1,0 +1,4 @@
+﻿.tmp/
+*.backup.html
+diff_check.txt
+exports/
