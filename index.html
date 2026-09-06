@@ -234,6 +234,102 @@
       .rv { opacity: 1; transform: none; }
     }
 
+    /* Construction / Draft Notice & Placeholders */
+    .under-construction-banner {
+      background: rgba(245, 158, 11, 0.08);
+      border: 1.5px solid rgba(217, 119, 6, 0.35);
+      border-right: 5px solid #d97706;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      text-align: right;
+    }
+    .under-construction-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 800;
+      color: #92400e;
+      font-size: 1.05rem;
+    }
+    .under-construction-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: #fef3c7;
+      color: #92400e;
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      border: 1px solid rgba(217, 119, 6, 0.3);
+    }
+    .under-construction-text {
+      color: #78350f;
+      font-size: 0.94rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+    .pulse-dot-amber {
+      width: 8px; height: 8px; border-radius: 50%; background: #d97706;
+      box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.7);
+      animation: pulse-amber 2s infinite;
+      display: inline-block;
+    }
+    @keyframes pulse-amber {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.7); }
+      70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(217, 119, 6, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(217, 119, 6, 0); }
+    }
+    .btn-tender-hero {
+      background: linear-gradient(135deg, #1D4ED8, #1E3A8A) !important;
+      color: #ffffff !important;
+      font-size: 1.08rem !important;
+      padding: 0.95rem 1.9rem !important;
+      box-shadow: 0 4px 18px rgba(29, 78, 216, 0.35) !important;
+      border: 1px solid rgba(255,255,255,0.2) !important;
+    }
+    .btn-tender-hero:hover {
+      background: linear-gradient(135deg, #2563EB, #1D4ED8) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(29, 78, 216, 0.45) !important;
+    }
+    .badge-tag {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      border-radius: 4px;
+      background: var(--surface-2);
+      color: var(--muted);
+      border: 1px solid var(--rule-strong);
+      margin-inline-end: 0.4rem;
+    }
+    .badge-tag-amber {
+      background: #fef3c7;
+      color: #92400e;
+      border-color: rgba(217, 119, 6, 0.3);
+    }
+    .badge-tag-blue {
+      background: #dbeafe;
+      color: #1e40af;
+      border-color: rgba(37, 99, 235, 0.3);
+    }
+    .room-draft-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #92400e;
+      background: #fef3c7;
+      border: 1px solid rgba(217,119,6,0.25);
+      border-radius: 4px;
+      padding: 0.15rem 0.45rem;
+      margin-inline-start: 0.5rem;
+      vertical-align: middle;
+    }
+
     /* ═══════════════════════════════════════════════════════════════
        HEADER 1: TOP QUICK ACTION BAR (שורה עליונה קבועה)
        ═══════════════════════════════════════════════════════════════ */
@@ -1010,12 +1106,12 @@
   <div class="top-action-bar">
     <div class="top-action-inner">
       <div class="top-action-tagline">
-        מרכז מורשת דוד לוי — מנהיגות, צדק חברתי וחיבור לפריפריה
+        🚧 מרכז מורשת דוד לוי (בהקמה) — אתר בבנייה · גרסת טיוטה והרצה
       </div>
       <div class="top-ctas">
-        <a href="#visit" class="top-cta-btn top-cta-tickets">רכישת כרטיסים</a>
+        <a href="#the-center" onclick="openTab('tab-tenders')" class="top-cta-btn" style="background:#1D4ED8; color:#ffffff; border:1px solid #1D4ED8; font-weight:700;">📋 הגשת מועמדות למכרז</a>
         <a href="https://wa.me/972528991833" target="_blank" class="top-cta-btn top-cta-whatsapp">יצירת קשר בוואטסאפ</a>
-        <a href="#donate" class="top-cta-btn top-cta-donate">לתרום</a>
+        <a href="#contact" class="top-cta-btn" style="background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.2);">פניות ובירורים</a>
       </div>
     </div>
   </div>
@@ -1055,7 +1151,7 @@
             <li><a href="#org-law" onclick="openTab('tab-law')">חוק המרכז ומוסדות מנהלים</a></li>
             <li><a href="#org-fund" onclick="openTab('tab-fund')">הקרן למורשת דוד לוי</a></li>
             <li><a href="#org-transparency" onclick="openTab('tab-transparency')">שקיפות ארגונית ושותפים</a></li>
-            <li><a href="#org-tenders" onclick="openTab('tab-tenders')">דרושים ומכרזים</a></li>
+            <li><a href="#the-center" onclick="openTab('tab-tenders')"><strong>מכרזים וקולות קוראים</strong> <span class="badge-sm" style="background:#1D4ED8; color:#fff;">פעיל</span></a></li>
           </ul>
         </li>
 
@@ -1063,8 +1159,8 @@
         <li class="nav-item">
           <a href="#visit" aria-expanded="false" aria-haspopup="true">לבקר במרכז</a>
           <ul class="dropdown" role="menu">
-            <li><a href="#visit-info">מידע למבקר (שעות ונגישות)</a></li>
-            <li><a href="#visit-tickets">רכישת כרטיסים</a></li>
+            <li><a href="#visit-info">מידע למבקר (בהקמה)</a></li>
+            <li><a href="#visit-tickets">שעות וכרטיסים (טרם נקבעו)</a></li>
             <li><a href="#visit-groups">קבוצות, משלחות ואירועים</a></li>
             <li><a href="#visit-audiences">מבקרים לפי קהל יעד</a></li>
           </ul>
@@ -1089,7 +1185,7 @@
         <li class="nav-item">
           <a href="#community" aria-expanded="false" aria-haspopup="true">תמיכה וקהילה</a>
           <ul class="dropdown" role="menu">
-            <li><a href="#donate">חוג ידידים ותרומות</a></li>
+            <li><a href="#donate">חוג ידידים ותרומות (בהקמה)</a></li>
             <li><a href="#newsletter">הצטרפו לניוזלטר</a></li>
             <li><a href="#community">חדשות, הזדמנויות וסיפורים</a></li>
           </ul>
@@ -1132,13 +1228,14 @@
           <li><a href="#org-docs" onclick="openTab('tab-docs')">מסמכי יסוד</a></li>
           <li><a href="#org-reports" onclick="openTab('tab-reports')">דוחות ותכנית עבודה</a></li>
           <li><a href="#org-law" onclick="openTab('tab-law')">חוק המרכז ומוסדות</a></li>
+          <li><a href="#the-center" onclick="openTab('tab-tenders')"><strong>מכרזים וקולות קוראים</strong> (פעיל)</a></li>
         </ul>
       </li>
       <li class="mobile-menu-item">
         <a href="#visit" class="mobile-menu-link" data-toggle="true">לבקר במרכז</a>
         <ul class="mobile-sub-menu">
-          <li><a href="#visit-info">מידע למבקר</a></li>
-          <li><a href="#visit-tickets">רכישת כרטיסים</a></li>
+          <li><a href="#visit-info">מידע למבקר (בהקמה)</a></li>
+          <li><a href="#visit-tickets">שעות וכרטיסים (טרם נקבעו)</a></li>
           <li><a href="#visit-groups">קבוצות, משלחות ואירועים</a></li>
         </ul>
       </li>
@@ -1155,7 +1252,7 @@
       <li class="mobile-menu-item">
         <a href="#community" class="mobile-menu-link" data-toggle="true">תמיכה וקהילה</a>
         <ul class="mobile-sub-menu">
-          <li><a href="#donate">תרומות</a></li>
+          <li><a href="#donate">תרומות וחוג ידידים (בהקמה)</a></li>
           <li><a href="#newsletter">ניוזלטר</a></li>
         </ul>
       </li>
@@ -1164,9 +1261,9 @@
       </li>
     </ul>
     <div class="mobile-nav-footer">
-      <a href="#visit" class="top-cta-btn top-cta-tickets">רכישת כרטיסים</a>
+      <a href="#the-center" onclick="openTab('tab-tenders')" class="top-cta-btn" style="background:#1D4ED8; color:#ffffff; font-weight:700;">📋 הגשת מועמדות למכרז</a>
       <a href="https://wa.me/972528991833" target="_blank" class="top-cta-btn top-cta-whatsapp">יצירת קשר בוואטסאפ</a>
-      <a href="#donate" class="top-cta-btn top-cta-donate">לתרום</a>
+      <a href="#contact" class="top-cta-btn" style="border:1px solid var(--rule-strong); color:var(--ink);">פניות ובירורים</a>
     </div>
   </div>
 
@@ -1176,12 +1273,28 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-text">
+          <!-- הודעת אתר בבנייה - מרכזית ובולטת -->
+          <div class="under-construction-banner rv">
+            <div class="under-construction-header">
+              <span class="under-construction-badge">
+                <span class="pulse-dot-amber"></span>
+                אתר בבנייה
+              </span>
+              <span>גרסת טיוטה והרצה בלבד</span>
+            </div>
+            <p class="under-construction-text">
+              אתר מרכז מורשת דוד לוי נמצא בשלבי הקמה ובינוי. בעת הזו משמש האתר כפלטפורמת מידע לציבור וכמוקד מרכזי לפרסום וקליטת הצעות למכרזים וקולות קוראים.
+            </p>
+          </div>
+
           <div class="label rv">מסמך יסוד · מרכז מורשת דוד לוי (1937–2024)</div>
           <h1 class="rv rv-d1">צדק חברתי,<br><em>מנהיגות ממלכתית</em></h1>
           <p class="hero-sub rv rv-d2">להנציח, לשמר ולהנחיל לדורות הבאים את פועלו הציבורי, החברתי והממלכתי של דוד לוי ז"ל — ממנהיגיה הבולטים של מדינת ישראל, אשר צמח מעיירת הפיתוח בית שאן והגיע לפסגות ההנהגה הלאומית.</p>
           <div class="hero-actions rv rv-d3">
-            <a href="#david-levy" class="btn-primary">גלו את המורשת והחזון</a>
-            <a href="#visit" class="btn-outline">תכננו ביקור במרכז</a>
+            <a href="#the-center" onclick="openTab('tab-tenders')" class="btn-primary btn-tender-hero">
+              <span style="font-size:1.2rem;">📋</span> הגשת מועמדות למכרז / קול קורא
+            </a>
+            <a href="#david-levy" class="btn-outline">גלו את המורשת והחזון</a>
           </div>
         </div>
         <div class="hero-img-container rv rv-d4" id="hero-img-wrapper">
@@ -1427,10 +1540,53 @@
 
       <!-- Tab 7: דרושים ומכרזים -->
       <div id="tab-tenders" class="tab-content">
-        <div class="org-card-grid">
-          <div class="org-card">
-            <h4>מכרזים וקולות קוראים</h4>
-            <p>קול קורא להפעלת תוכניות מנהיגות בבתי ספר, מכרזי רכש ופיתוח תכנים מוזיאליים.</p>
+        <div class="tenders-hub-card" style="background:var(--surface); border:1.5px solid var(--accent); border-radius:12px; padding:2rem; margin-bottom:2rem; box-shadow:0 10px 30px rgba(29,78,216,0.08);">
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; border-bottom:1px solid var(--rule); padding-bottom:1.2rem; margin-bottom:1.5rem;">
+            <div>
+              <span class="badge-tag badge-tag-blue">מוקד רשמי פתוח</span>
+              <h3 style="margin-top:0.4rem; color:var(--navy); font-size:1.6rem;">הגשת הצעות למכרזים וקולות קוראים</h3>
+            </div>
+            <a href="#contact" class="btn-primary" style="background:#2563EB;">הגשת מועמדות מהירה דרך האתר ←</a>
+          </div>
+          <p style="color:var(--muted); line-height:1.7; margin-bottom:1.5rem;">
+            מרכז מורשת דוד לוי פועל בהתאם לעקרונות מנהל תקין, שוויון הזדמנויות ושקיפות מלאה. לקראת הקמת המרכז, גיבוש התוכניות הפדגוגיות והפעלת המערך המוזיאלי, מפורסמים בזאת המכרזים והקולות הקוראים הבאים להגשת הצעות מטעם אנשי מקצוע, ספקים, מוסדות חינוך וחוקרים.
+          </p>
+          
+          <div class="org-card-grid">
+            <div class="org-card" style="border-top: 4px solid var(--accent);">
+              <span class="badge-tag badge-tag-amber">פתוח להגשה</span>
+              <h4 style="margin-top:0.5rem;">מכרז פומבי 01/2026: אפיון ותכנון תכנים מוזיאליים</h4>
+              <p>תכנון פרוגרמה אוצרותית, פיתוח עמדות מולטימדיה אינטראקטיביות והפקת מיצגי מורשת היסטוריים אודות פועלו של דוד לוי ז"ל.</p>
+              <div style="margin-top:1.2rem;">
+                <a href="#contact" class="btn-outline" style="width:100%; font-size:0.88rem; padding:0.6rem;">הגשת פנייה והורדת מסמכי מכרז</a>
+              </div>
+            </div>
+
+            <div class="org-card" style="border-top: 4px solid #16a34a;">
+              <span class="badge-tag badge-tag-amber">פתוח להגשה</span>
+              <h4 style="margin-top:0.5rem;">קול קורא 02/2026: תוכניות מנהיגות בבתי ספר</h4>
+              <p>הפעלת תוכניות פדגוגיות וסדנאות מנהיגות ורטוריקה בבתי ספר ובמוסדות נוער ברחבי הפריפריה החברתית והגיאוגרפית.</p>
+              <div style="margin-top:1.2rem;">
+                <a href="#contact" class="btn-outline" style="width:100%; font-size:0.88rem; padding:0.6rem;">הגשת פנייה והורדת מסמכי קול קורא</a>
+              </div>
+            </div>
+
+            <div class="org-card" style="border-top: 4px solid var(--gold);">
+              <span class="badge-tag badge-tag-blue">שלב מיון מוקדם</span>
+              <h4 style="margin-top:0.5rem;">קול קורא 03/2026: אדריכלות ועיצוב חללי מורשת</h4>
+              <p>הזמנה להציע הצעות קונספט ראשוניות לתכנון אדריכלי, חלוקת חללים וסביבת מבקרים מונגשת ומודרנית.</p>
+              <div style="margin-top:1.2rem;">
+                <a href="#contact" class="btn-outline" style="width:100%; font-size:0.88rem; padding:0.6rem;">הגשת פנייה לקבלת מפרט</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:1.8rem; background:var(--surface-2); border-radius:8px; padding:1.2rem 1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+            <div>
+              <strong>שאלות הבהרה והגשת מסמכים:</strong>
+              <div style="font-size:0.9rem; color:var(--muted); margin-top:0.2rem;">ניתן להגיש הצעות ומסמכים לוועדת המכרזים בדוא״ל: <a href="mailto:tenders@davidlevycenter.org.il" style="color:var(--accent); font-weight:600;">tenders@davidlevycenter.org.il</a> או באמצעות טופס יצירת הקשר באתר.</div>
+            </div>
+            <a href="#contact" class="btn-primary" style="padding:0.6rem 1.4rem; font-size:0.9rem;">פנייה לוועדת המכרזים</a>
           </div>
         </div>
       </div>
@@ -1439,14 +1595,14 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       CATEGORY 3: לבקר במרכז (מידע למבקר, כרטיסים, קבוצות, קהלים)
+       CATEGORY 3: לבקר במרכז (מידע למבקר, סיורים, קבוצות, קהלים)
        ═══════════════════════════════════════════════════════════════ -->
   <section class="visit-section" id="visit">
     <div class="container">
       <div class="org-header">
-        <div class="label rv">לבקר במרכז</div>
-        <h2 class="rv rv-d1">תכנון ביקור, <em>סיורים ומשלחות</em></h2>
-        <p class="rv rv-d2" style="margin: 0 auto; margin-top: 1rem; color: var(--muted);">כל מה שמבקר צריך לפני ההגעה, בזמן התכנון ולפי סוג הקהל.</p>
+        <div class="label rv">לבקר במרכז — תכנון עתידי</div>
+        <h2 class="rv rv-d1">תכנון ביקור, <em>סיורים ומשלחות</em> <span class="room-draft-tag">בהקמה</span></h2>
+        <p class="rv rv-d2" style="margin: 0 auto; margin-top: 1rem; color: var(--muted);">מידע זה מהווה מתווה תכנון ראשוני. מועדי הפתיחה והביקורים יפורסמו בהמשך.</p>
       </div>
 
       <div class="visit-grid">
@@ -1454,34 +1610,37 @@
           <div class="visit-row">
             <div class="visit-icon">•</div>
             <div class="visit-detail">
-              <h5>שעות פעילות</h5>
-              <p>ימים א'–ה': 09:00 – 17:00 | ימי שישי וערבי חג: 09:00 – 13:00</p>
+              <h5>שעות פעילות ומועדי כניסה</h5>
+              <p><span class="badge-tag badge-tag-amber">טרם פורסם</span> שעות הפעילות, ימי הסיורים ומועדי הכניסה למרכז ייקבעו ויוכרזו לקראת פתיחת המרכז לציבור הרחב. המרכז נמצא כעת בשלבי הקמה ובינוי.</p>
             </div>
           </div>
           <div class="visit-row">
             <div class="visit-icon">•</div>
             <div class="visit-detail">
-              <h5>מיקום והגעה</h5>
-              <p>מתחם המורשת, בית שאן / ירושלים (חניה בשפע ונגישות מלאה בתחבורה ציבורית)</p>
+              <h5>מיקום ומתחם המרכז</h5>
+              <p><span class="badge-tag badge-tag-blue">בתכנון</span> מתחם המורשת מתוכנן בבית שאן / ירושלים. כתובת מדויקת והסדרי הגעה יפורסמו עם השלמת שלבי התכנון.</p>
             </div>
           </div>
           <div class="visit-row">
             <div class="visit-icon">•</div>
             <div class="visit-detail">
-              <h5>נגישות מלאה</h5>
-              <p>התאמות נגישות מלאות לכיסאות גלגלים, מערכות עזר לשמיעה ועזרי ראייה.</p>
+              <h5>הנגשה מקיפה</h5>
+              <p><span class="badge-tag badge-tag-blue">עקרון יסוד</span> המרכז מתוכנן מראש עם נגישות פיזית, חושית וקוגניטיבית מלאה על פי התקנים המחמירים ביותר.</p>
             </div>
           </div>
           <div style="margin-top:1.5rem;" id="visit-tickets">
-            <a href="#donate" class="btn-primary" style="width: 100%;">רכישת כרטיסים אונליין</a>
+            <div style="background:var(--surface-2); border:1.5px dashed var(--rule-strong); border-radius:8px; padding:1.25rem; text-align:center;">
+              <div style="font-weight:700; color:var(--navy); margin-bottom:0.3rem;">🎟️ מחירון וכרטיסים (טרם נקבעו)</div>
+              <p style="font-size:0.88rem; color:var(--muted); margin:0;">דמי הכניסה והסדרי כרטיסים מוזלים לקבוצות, לתלמידים, לחיילים ולאזרחים ותיקים יפורסמו לקראת מועד ההשקה הרשמית.</p>
+            </div>
           </div>
         </div>
 
         <div class="visit-info-box rv rv-d1" id="visit-groups">
-          <h3>קבוצות, משלחות ואירועים</h3>
-          <p style="color:var(--muted); font-size:1rem; margin-bottom: 1.5rem;">תיאום סיורים מודרכים לקבוצות מאורגנות, משלחות דיפלומטיות, כוחות הביטחון וימי עיון מוסדיים.</p>
+          <h3>קבוצות, משלחות ואירועים <span class="room-draft-tag">רישום מוקדם</span></h3>
+          <p style="color:var(--muted); font-size:1rem; margin-bottom: 1.5rem;">ריכוז פניות מקדמיות לקראת תיאום סיורים מודרכים לקבוצות מאורגנות, משלחות דיפלומטיות, כוחות הביטחון וימי עיון מוסדיים.</p>
           
-          <div class="label">מבקרים לפי קהל יעד:</div>
+          <div class="label">קהלי יעד מתוכננים:</div>
           <div class="audience-grid" id="visit-audiences">
             <div class="audience-chip">מערכת החינוך</div>
             <div class="audience-chip">כוחות הביטחון</div>
@@ -1565,31 +1724,31 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════
-       CONDITIONAL MODULE: אודות המוזיאון (סעיף מותנה במידה וקיים מוזיאון פיזי)
+       CONDITIONAL MODULE: אודות המוזיאון (סעיף מותנה — תכנון רעיוני)
        ═══════════════════════════════════════════════════════════════ -->
   <section class="museum-section" id="museum-conditional">
     <div class="container">
       <div class="museum-badge-conditional">
-        סעיף מותנה — מודול המוזיאון הפיזי (אודות המוזיאון)
+        פרוגרמה אדריכלית — תכנון רעיוני בהקמה (טיוטה)
       </div>
-      <h2>אודות המוזיאון — הסיפור וחדרי התצוגה</h2>
-      <p style="margin-top:0.5rem; max-width:700px;">מסלול תצוגה חווייתי ואינטראקטיבי המוליך את המבקר בין תחנות חייו של דוד לוי והמהפכות החברתיות שהוביל.</p>
+      <h2>אודות המוזיאון — חזון החללים וחדרי התצוגה <span class="room-draft-tag">קונספט ראשוני</span></h2>
+      <p style="margin-top:0.5rem; max-width:700px; color:var(--muted);">מבנה המוזיאון, חלוקת החללים והתצוגות שלהלן מהווים הצעה תכנונית רעיונית בלבד. הפרוגרמה המפורטת תעוצב ותאושר בהמשך במסגרת מכרזי התוכן והאדריכלות של המרכז.</p>
 
       <div class="museum-rooms">
         <div class="museum-room-card rv">
-          <h4>חדר 1: מערי הפיתוח לממשלה</h4>
+          <h4>חדר 1: מערי הפיתוח לממשלה <span class="room-draft-tag">קונספט מוצע</span></h4>
           <p>תצוגת בית שאן, שנות העלייה, עבודת כפיים בבנייה וצמיחת המנהיגות השורשית.</p>
         </div>
         <div class="museum-room-card rv rv-d1">
-          <h4>חדר 2: המהפכה החברתית</h4>
+          <h4>חדר 2: המהפכה החברתית <span class="room-draft-tag">קונספט מוצע</span></h4>
           <p>תצוגה אינטראקטיבית של פרויקט שיקום השכונות, מפות התיישבות ודיור ציבורי.</p>
         </div>
         <div class="museum-room-card rv rv-d2">
-          <h4>חדר 3: זירה דיפלומטית</h4>
+          <h4>חדר 3: זירה דיפלומטית <span class="room-draft-tag">קונספט מוצע</span></h4>
           <p>שחזור לשכת שר החוץ, הסכמים בינלאומיים, ועידת מדריד וביטול החלטת האו״ם.</p>
         </div>
         <div class="museum-room-card rv rv-d3">
-          <h4>חדר 4: מרכז הרטוריקה</h4>
+          <h4>חדר 4: מרכז הרטוריקה <span class="room-draft-tag">קונספט מוצע</span></h4>
           <p>עמדות שמע וניתוח נאומים היסטוריים בכנסת ישראל ותרבות הדיון הממלכתית.</p>
         </div>
       </div>
@@ -1602,9 +1761,9 @@
   <section class="community-section" id="community">
     <div class="container">
       <div class="org-header">
-        <div class="label rv">תמיכה וקהילה</div>
-        <h2 class="rv rv-d1">חוג הידידים <em>והתמיכה במורשת</em></h2>
-        <p class="rv rv-d2" style="margin: 0 auto; margin-top: 1rem; color: var(--muted);">הצטרפו לקהילת התומכים והידידים הפועלים להנחלת מנהיגות וצדק חברתי.</p>
+        <div class="label rv">תמיכה וקהילה — בהקמה</div>
+        <h2 class="rv rv-d1">חוג הידידים <em>והתמיכה במורשת</em> <span class="room-draft-tag">טיוטה</span></h2>
+        <p class="rv rv-d2" style="margin: 0 auto; margin-top: 1rem; color: var(--muted);">הצטרפו לקהילת התומכים והידידים הפועלים להנחלת מנהיגות וצדק חברתי. מסלולי התמיכה יופעלו עם השלמת הליכי ההקמה.</p>
       </div>
 
       <blockquote class="rv rv-d3">
@@ -1613,22 +1772,25 @@
 
       <div class="donation-tiers" id="donate">
         <div class="tier-card rv">
-          <div class="tier-name">ידיד</div>
-          <div class="tier-amount">₪180</div>
-          <div class="tier-desc">תמיכה שנתית בפעילות המרכז</div>
-          <a href="#" class="btn-outline" style="width:100%; margin-top:auto;">תרום עכשיו</a>
+          <span class="badge-tag badge-tag-amber" style="align-self:flex-start;">מסלול עתידי בהקמה</span>
+          <div class="tier-name" style="margin-top:0.5rem;">חוג ידידים</div>
+          <div class="tier-amount" style="font-size:1.35rem; color:var(--navy);">תמיכה שנתית</div>
+          <div class="tier-desc">הצטרפות לקהילת התומכים בפעילות החינוכית של המרכז (הגדרת מסלולי ההצטרפות תפורסם בהמשך)</div>
+          <a href="#contact" class="btn-outline" style="width:100%; margin-top:auto;">לרישום מוקדם והתעניינות</a>
         </div>
         <div class="tier-card rv rv-d1" style="border-color: var(--accent); box-shadow: 0 10px 30px rgba(29,78,216,0.1);">
-          <div class="tier-name">תומך</div>
-          <div class="tier-amount">₪500</div>
-          <div class="tier-desc">מלגת סיוע לסטודנט מהפריפריה</div>
-          <a href="#" class="btn-primary" style="width:100%; margin-top:auto;">תרום עכשיו</a>
+          <span class="badge-tag badge-tag-blue" style="align-self:flex-start;">בתהליך גיבוש</span>
+          <div class="tier-name" style="margin-top:0.5rem;">קרן מלגות ומחקר</div>
+          <div class="tier-amount" style="font-size:1.35rem; color:var(--accent);">עידוד צעירי הפריפריה</div>
+          <div class="tier-desc">מלגות מחקר וסיוע לסטודנטים ולחוקרים מערי הפיתוח והפריפריה החברתית</div>
+          <a href="#contact" class="btn-primary" style="width:100%; margin-top:auto;">לפרטים והבעת עניין</a>
         </div>
         <div class="tier-card rv rv-d2">
-          <div class="tier-name">שותף</div>
-          <div class="tier-amount">₪1,800</div>
-          <div class="tier-desc">הקדשת יום עיון חינוכי לנוער</div>
-          <a href="#" class="btn-outline" style="width:100%; margin-top:auto;">תרום עכשיו</a>
+          <span class="badge-tag badge-tag-amber" style="align-self:flex-start;">מסלול עתידי בהקמה</span>
+          <div class="tier-name" style="margin-top:0.5rem;">שותפות במורשת</div>
+          <div class="tier-amount" style="font-size:1.35rem; color:var(--navy);">מיזמי הנצחה וחינוך</div>
+          <div class="tier-desc">הקדשת ימי עיון חינוכיים לנוער, סדנאות מנהיגות ומיזמי תיעוד היסטורי</div>
+          <a href="#contact" class="btn-outline" style="width:100%; margin-top:auto;">לפנייה לקרן המורשת</a>
         </div>
       </div>
 
@@ -1658,7 +1820,17 @@
       <div class="contact-grid">
         <div class="visit-info-box rv">
           <h3>דרכי התקשרות מהירות</h3>
-          <div class="visit-row" style="margin-top: 1.5rem;">
+          
+          <div class="visit-row" style="margin-top: 1.5rem; border: 1.5px solid rgba(29, 78, 216, 0.25); background: rgba(29, 78, 216, 0.04); border-radius: 8px; padding: 0.9rem 1rem;">
+            <div class="visit-icon" style="color:var(--accent);">📋</div>
+            <div class="visit-detail">
+              <h5 style="color:var(--accent);">ועדת מכרזים וקולות קוראים</h5>
+              <p><a href="mailto:tenders@davidlevycenter.org.il" style="color:var(--accent); font-weight:700; text-decoration:none;">tenders@davidlevycenter.org.il</a></p>
+              <p style="font-size:0.8rem; color:var(--muted); margin-top:0.2rem;">לקבלת מסמכי מכרז, שאלות הבהרה והגשת מועמדות רשמית</p>
+            </div>
+          </div>
+
+          <div class="visit-row" style="margin-top: 1rem;">
             <div class="visit-icon">•</div>
             <div class="visit-detail">
               <h5>וואטסאפ ישיר</h5>
@@ -1668,7 +1840,7 @@
           <div class="visit-row">
             <div class="visit-icon">•</div>
             <div class="visit-detail">
-              <h5>דואר אלקטרוני</h5>
+              <h5>דואר אלקטרוני כללי</h5>
               <p><a href="mailto:info@davidlevycenter.org.il" style="color:var(--accent); text-decoration:none;">info@davidlevycenter.org.il</a></p>
               <p><a href="mailto:Rodavid48@gmail.com" style="color:var(--accent); text-decoration:none;">Rodavid48@gmail.com</a></p>
             </div>
@@ -1676,18 +1848,28 @@
           <div class="visit-row">
             <div class="visit-icon">•</div>
             <div class="visit-detail">
-              <h5>כתובת המרכז</h5>
-              <p>בית שאן / ירושלים</p>
+              <h5>מתחם המרכז</h5>
+              <p>בית שאן / ירושלים (בשלבי תכנון והקמה)</p>
             </div>
           </div>
         </div>
 
         <div class="form-card rv rv-d1">
-          <h3>טופס פנייה ישירה</h3>
+          <h3>טופס פנייה והגשת הצעות</h3>
           <form id="contact-form" onsubmit="event.preventDefault(); document.getElementById('form-success').style.display='block'; this.reset();">
             <div class="fg">
+              <select class="fg-input" id="f-topic" style="padding-top: 0.9rem;" required>
+                <option value="tender" selected>הגשת מועמדות למכרז / קול קורא</option>
+                <option value="general">פנייה כללית / בירור</option>
+                <option value="edu">תוכניות חינוך והדרכה</option>
+                <option value="press">עיתונות ומדיה</option>
+                <option value="friends">חוג ידידים והתנדבות</option>
+              </select>
+              <label class="fg-label" for="f-topic">נושא הפנייה</label>
+            </div>
+            <div class="fg">
               <input type="text" class="fg-input" id="f-name" placeholder=" " required>
-              <label class="fg-label" for="f-name">שם מלא</label>
+              <label class="fg-label" for="f-name">שם מלא / שם גוף מציע</label>
             </div>
             <div class="fg">
               <input type="email" class="fg-input" id="f-email" placeholder=" " required>
@@ -1695,13 +1877,13 @@
             </div>
             <div class="fg">
               <input type="tel" class="fg-input" id="f-phone" placeholder=" " required>
-              <label class="fg-label" for="f-phone">טלפון</label>
+              <label class="fg-label" for="f-phone">טלפון ליצירת קשר</label>
             </div>
             <div class="fg">
               <textarea class="fg-textarea" id="f-msg" placeholder=" " rows="4" required></textarea>
-              <label class="fg-label" for="f-msg">תוכן הפנייה</label>
+              <label class="fg-label" for="f-msg">תוכן הפנייה / פירוט ההצעה</label>
             </div>
-            <button type="submit" class="btn-primary">שליחת פנייה ←</button>
+            <button type="submit" class="btn-primary">שליחת פנייה / הגשת מועמדות ←</button>
             <div id="form-success" style="display:none; color: green; margin-top: 1rem; font-weight:600; text-align:center;">✓ פנייתכם התקבלה בהצלחה! צוות המרכז יחזור אליכם בהקדם.</div>
           </form>
         </div>
@@ -1718,7 +1900,7 @@
             <img src="logo2.jpg" alt="לוגו מרכז דוד לוי" style="width:48px; height:48px; object-fit:cover; border-radius:8px; border:1px solid rgba(255,255,255,0.2);">
             <span style="font-family:var(--font-display); font-size:1.3rem; font-weight:700; color:#fff;">מרכז מורשת<br><span style="color:var(--gold);">דוד לוי</span></span>
           </div>
-          <p style="line-height:1.7;">עמותה להנצחה, שימור והנחלת מורשתו הציבורית, החברתית והממלכתית של דוד לוי ז״ל, וקידום שוויון הזדמנויות בפריפריה הישראלית.</p>
+          <p style="line-height:1.7;">עמותה להנצחה, שימור והנחלת מורשתו הציבורית, החברתית והממלכתית של דוד לוי ז״ל, וקידום שוויון הזדמנויות בפריפריה הישראלית. האתר בשלבי בנייה והרצה.</p>
         </div>
         
         <div class="footer-links">
@@ -1726,17 +1908,18 @@
           <ul>
             <li><a href="#david-levy">1. דוד לוי - האיש והמורשת</a></li>
             <li><a href="#the-center">2. המרכז ומסמכי יסוד</a></li>
-            <li><a href="#visit">3. לבקר במרכז וכרטיסים</a></li>
+            <li><a href="#the-center" onclick="openTab('tab-tenders')"><strong>מכרזים וקולות קוראים</strong> <span class="badge-sm" style="background:#1D4ED8; color:#fff;">פעיל</span></a></li>
+            <li><a href="#visit">3. לבקר במרכז (בהקמה)</a></li>
             <li><a href="#education">4. חינוך ומשאבים</a></li>
             <li><a href="#events">אירועים ותערוכות</a></li>
-            <li><a href="#community">6. קהילה וחוג ידידים</a></li>
-            <li><a href="#contact">יצירת קשר</a></li>
+            <li><a href="#community">6. קהילה וחוג ידידים (בהקמה)</a></li>
+            <li><a href="#contact">יצירת קשר והגשת הצעות</a></li>
           </ul>
         </div>
 
         <div>
           <h3>הרשמה לעדכונים</h3>
-          <p style="font-size:0.9rem; margin-bottom:1rem;">קבלו עדכונים על תוכניות מנהיגות, אירועי הנצחה ופעילות המוזיאון.</p>
+          <p style="font-size:0.9rem; margin-bottom:1rem;">קבלו עדכונים על תוכניות מנהיגות, פרסום מכרזים נוספים ואירועי הנצחה.</p>
           <form style="display:flex; gap:0.5rem;" onsubmit="event.preventDefault(); alert('תודה שנרשמתם!'); this.reset();">
             <input type="email" class="fg-input" placeholder="כתובת אימייל" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.2); color:#fff; padding:0.8rem;" required>
             <button type="submit" class="btn-primary" style="padding:0.8rem 1.2rem;">הרשמה</button>
@@ -1797,6 +1980,12 @@
     function openTab(tabId) {
       const btn = document.querySelector(`.tab-btn[onclick*="${tabId}"]`);
       switchTab(tabId, btn);
+      const target = document.getElementById(tabId) || document.getElementById('the-center');
+      if (target) {
+        setTimeout(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 60);
+      }
     }
 
     /* Mobile Menu Logic */
